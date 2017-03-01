@@ -1,0 +1,12 @@
+platform: mqtt
+name: "Upstairs Hall Lamp"
+state_topic: "smartthings/Upstairs Hall Lamp/switch"
+command_topic: "smartthings/Upstairs Hall Lamp/switch"
+brightness_state_topic: "smartthings/Upstairs Hall Lamp/level"
+brightness_command_topic: "smartthings/Upstairs Hall Lamp/level"
+brightness_scale: 99
+qos: 0
+payload_on: "on"
+payload_off: "off"
+optimistic: false
+retain: true

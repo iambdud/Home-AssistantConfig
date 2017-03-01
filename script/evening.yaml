@@ -1,0 +1,27 @@
+evening:
+  alias: "evening"
+  sequence:
+  - service: script.sonos_say
+  #- service: script.voice_notify
+    #data:
+    data_template:
+      where: living_room
+      volume: 0.4
+      what: 'good evening'
+  - service: light.turn_off
+    data:
+      entity_id: light.kitchen_lights, light.breakfast_area_lights
+  - service: mqtt.publish
+    data_template:
+      topic: "smartthings/Living Room Lights/level"
+      payload: '50'
+  - service: mqtt.publish
+    data_template:
+      topic: "smartthings/Cabinet Lights/level"
+      payload: '100'
+  - service: light.turn_on
+    data:
+      entity_id: light.cabinet_lights, light.living_room_lights
+  - service: scene.turn_on
+    data:
+      entity_id: scene.master_bedroom_relax

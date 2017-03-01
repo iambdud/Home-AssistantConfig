@@ -1,0 +1,4 @@
+platform: mqtt
+name: "MPS Backdoor Temperature"
+state_topic: "smartthings/MPS Backdoor/temperature"  
+retain: true 

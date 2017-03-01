@@ -1,0 +1,11 @@
+alias: Master Bedroom Set Brightness
+trigger:
+  platform: state
+  entity_id: input_slider.brightness_mbr
+action:
+  service: light.turn_on
+  data:
+    entity_id:
+      - light.master_bedroom_lights
+  data_template:
+    brightness: '{{ states( "input_slider.brightness_mbr" )|round( 0 ) }}'

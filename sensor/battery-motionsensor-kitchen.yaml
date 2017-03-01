@@ -1,0 +1,5 @@
+platform: mqtt
+name: "Motion Sensor Kitchen Battery Level"
+state_topic: "smartthings/Motion Sensor Kitchen/battery"
+unit_of_measurement: "%"
+retain: true

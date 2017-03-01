@@ -1,0 +1,9 @@
+platform: mqtt
+name: "Right Garage Door"
+state_topic: "GarageDoorRight/state"
+command_topic: "GarageDoorRight/set"
+payload_open: "open"
+payload_close: "close"
+payload_stop: "stop"
+state_open: "open"
+state_closed: "closed"

@@ -1,0 +1,3 @@
+platform: mqtt
+state_topic: "home/notifications/lastmsg"
+name: "notifications_lastmsg"

@@ -1,0 +1,17 @@
+alias: Set Blue Iris to morning/night
+trigger:
+  - platform: time
+    after: '06:00'
+    #after: '14:59'
+  - platform: time
+    after: '23:00'
+condition:
+  condition: state
+  entity_id: group.presence
+  state: 'home'
+action:
+  #service: shell_command.set_bi_home
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.set_biprofile
+      option: "{{ 'home' if trigger.now.time().hour == 6 else 'night' }}"

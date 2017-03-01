@@ -1,0 +1,13 @@
+alias: Turn On LR Lights Extended when LR Lights Turn On
+trigger:
+  - platform: state
+    entity_id: light.living_room_lights
+    to: "on"
+condition:
+  condition: state
+  entity_id: light.living_room_lights_extended
+  state: "off"
+action:
+  service: light.turn_on
+  data:
+    entity_id: light.living_room_lights_extended

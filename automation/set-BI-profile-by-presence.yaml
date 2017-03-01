@@ -1,0 +1,14 @@
+alias: Set Blue Iris to Home when both phones are at home
+trigger:
+  - platform: state
+    entity_id: group.presence
+    to: 'home'
+  - platform: state
+    entity_id: group.presence
+    to: 'not_home'
+action:
+  #service: shell_command.set_bi_home
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.set_biprofile
+      option: "{{ 'away' if trigger.to_state.state == 'not_home' else 'home' }}"

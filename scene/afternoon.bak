@@ -1,0 +1,12 @@
+name: afternoon
+entities:
+  group.kitchen:
+    state: on
+  light.living_room_lights:
+    brightness: 255
+  light.living_room_lights_extended:
+    brightness: 255
+  light.cabinet_lights:
+    brightness: 255
+  scene.master_bedroom_relax:
+    state: on

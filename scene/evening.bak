@@ -1,0 +1,12 @@
+name: evening
+entities:
+  light.kitchen_lights:
+    state: off
+  light.breakfast_area_lights:
+    state: off
+  light.living_room_lights:
+    brightness: 127
+  light.living_room_lights_extended:
+    brightness: 127
+  scene.master_bedroom_relax:
+    state: on

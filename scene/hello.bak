@@ -1,0 +1,11 @@
+name: hello
+entities:
+  light.living_room_lights:
+    state: on
+  light.kitchen_lights:
+    state: on
+  switch.living_room_outlet:
+    state: on
+  light.upstairs_hall_lamp:
+    state: on
+# tts to say hello?

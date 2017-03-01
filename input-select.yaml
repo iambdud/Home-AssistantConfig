@@ -1,0 +1,27 @@
+set_biprofile:
+  name: "Set BI Profile"
+  initial: "-"
+  options:
+    - "-"
+    - "home"
+    - "away"
+    - "night"
+scene_master_bedroom:
+  name: Scene
+  icon: mdi:brightness-auto
+  initial: "-"
+  options:
+    - "-"
+    - "Off"
+    - Nightlight
+    - Read
+    - Relax
+    - Concentrate
+    - Energized
+playroom_stoplight:
+  name: Playroom Stoplight
+  options:
+    - "Off"
+    - "Red"
+    - "Green"
+    - "Blue"

@@ -1,0 +1,6 @@
+name: goodbye
+entities:
+  group.all_lights:
+    state: off
+  group.all_switches:
+    state: off

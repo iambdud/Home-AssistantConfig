@@ -1,0 +1,42 @@
+platform: template
+sensors:
+  garagedooresp:
+    friendly_name: 'Garage Door ESP'
+    value_template: >-
+            {%- if is_state("device_tracker.esp_0f530e", "home") %}
+                Online
+            {% else %}
+                Offline
+            {%- endif %}
+  jackcam:
+    friendly_name: 'JackCam'
+    value_template: >-
+            {%- if is_state("device_tracker.jackcam", "home") %}
+                Online
+            {% else %}
+                Offline
+            {%- endif %}
+  ryancam:
+    friendly_name: 'RyanCam'
+    value_template: >-
+            {%- if is_state("device_tracker.ryancam", "home") %}
+                Online
+            {% else %}
+                Offline
+            {%- endif %}
+  livingroomcam:
+    friendly_name: 'LivingRoomCam'
+    value_template: >-
+            {%- if is_state("device_tracker.livingroomcam", "home") %}
+                Online
+            {% else %}
+                Offline
+            {%- endif %}
+  bonusroomcam:
+    friendly_name: 'BonusRoomCam'
+    value_template: >-
+            {%- if is_state("device_tracker.bonusroomcam", "home") %}
+                Online
+            {% else %}
+                Offline
+            {%- endif %}

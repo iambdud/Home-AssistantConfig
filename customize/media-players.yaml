@@ -1,0 +1,7 @@
+media_player.living_room_tv:
+  friendly_name: 'Living Room TV'
+  emulated_hue: true
+
+media_player.master_bedroom_tv:
+  friendly_name: 'Master Bedroom TV'
+  emulated_hue: true

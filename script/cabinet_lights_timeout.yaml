@@ -1,0 +1,9 @@
+cabinet_lights_timeout:
+  alias: "Dim cabinet lights after 2 minutes of inactivity"
+  sequence:
+  - delay:
+      minutes: 2
+  - service: mqtt.publish
+    data_template:
+      topic: "smartthings/Cabinet Lights/level"
+      payload: '25'

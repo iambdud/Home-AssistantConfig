@@ -1,0 +1,20 @@
+alias: Living Room Lights Set Brightness
+trigger:
+  platform: state
+  entity_id: input_slider.brightness_lr_lights
+action:
+  #- service: mqtt.publish
+    #data_template:
+      #topic: "smartthings/Living Room Lights/level"
+      #retain: true
+      #payload: '{{ states.input_slider.brightness_lr_lights.state | int }}'
+  #- service: mqtt.publish
+    #data_template:
+      #topic: "smartthings/Living Room Lights Extended/level"
+      #retain: true
+      #payload: '{{ states.input_slider.brightness_lr_lights.state | int }}'
+  - service: light.turn_on
+    data_template:
+      entity_id: light.living_room_lights
+      #brightness: '{{ states( "input_slider.brightness_lr_lights" )|round( 0 ) }}'
+      brightness: '{{ trigger.to_state.state | int }}'

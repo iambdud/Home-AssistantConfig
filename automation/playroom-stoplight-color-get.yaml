@@ -1,0 +1,9 @@
+alias: "Get current stoplight value"
+trigger:
+  platform: mqtt
+  topic: home/playroom stoplight/color
+action:
+  service: input_select.select_option
+  data_template:
+    entity_id: input_select.playroom_stoplight
+    option: '{{ trigger.payload}}'

@@ -1,0 +1,6 @@
+name: Master Bedroom Read
+entities:
+  light.master_bedroom_lights:
+    state: on
+    brightness: 254
+    color_temp: 356

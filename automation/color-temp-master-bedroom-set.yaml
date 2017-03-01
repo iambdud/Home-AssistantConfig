@@ -1,0 +1,11 @@
+alias: Master Bedroom Color Temp
+trigger:
+  platform: state
+  entity_id: input_slider.color_temp_mbr
+action:
+  service: light.turn_on
+  data:
+    entity_id:
+      - light.master_bedroom_lights
+  data_template:
+    color_temp: '{{ states( "input_slider.color_temp_mbr" )|round( 0 ) }}'

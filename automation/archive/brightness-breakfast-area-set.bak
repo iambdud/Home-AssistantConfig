@@ -1,0 +1,38 @@
+alias: Set Breakfast Area Set Brightness
+trigger:
+  platform: state
+  entity_id: input_slider.brightness_breakfast
+
+action:
+  #breakfast 1
+  #- service: mqtt.publish
+    #data_template:
+      #topic: "smartthings/Breakfast 1/level"
+      #retain: true
+      #payload: '{{ states.input_slider.brightness_breakfast.state | int }}'
+  #breakfast 2
+  #- service: mqtt.publish
+    #data_template:
+      #topic: "smartthings/Breakfast 2/level"
+      #retain: true
+      #payload: '{{ states.input_slider.brightness_breakfast.state | int }}'
+  #breakfast 3
+  #- service: mqtt.publish
+    #data_template:
+      #topic: "smartthings/Breakfast 3/level"
+      #retain: true
+      #payload: '{{ states.input_slider.brightness_breakfast.state | int }}'
+  #- service: mqtt.publish
+    #data_template:
+      #topic: "smartthings/Breakfast Area Lights/level"
+      #retain: true
+      #payload: '{{ states.input_slider.brightness_breakfast.state | int }}'
+  #- service: light.turn_on
+    #data:
+      #entity_id:
+        #- light.breakfast_area_lights
+        
+  - service: light.turn_on
+    data_template:
+      entity_id: light.breakfast_area_lights
+      brightness: '{{ trigger.to_state.state | int }}'

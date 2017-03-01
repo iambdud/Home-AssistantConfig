@@ -1,0 +1,9 @@
+platform: webostv
+host: 10.10.10.74
+name: "Master Bedroom TV"
+filename: webostv.conf
+customize:
+  sources:
+    - livetv
+    - plex
+    - netflix

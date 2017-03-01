@@ -1,0 +1,23 @@
+tv_time:
+  alias: "tv time"
+  sequence:
+  - service: script.sonos_say
+  #- service: script.voice_notify
+    #data:
+    data_template:
+      where: living_room
+      volume: 0.4
+      what: 'its TV time... woo!'
+  - service: media_player.turn_on
+    data:
+      entity_id: media_player.living_room_tv
+  - service: light.turn_off
+    data:
+      entity_id: light.living_room_lamp, light.kitchen_lights, light.breakfast_area_lights
+  - service: mqtt.publish
+    data_template:
+      topic: "smartthings/Living Room Lights/level"
+      payload: '50'
+  - service: light.turn_on
+    data:
+      entity_id: light.living_room_lights

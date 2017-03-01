@@ -1,0 +1,9 @@
+platform: mqtt
+name: "Driveway Lights"
+state_topic: "smartthings/Driveway Lights/switch"
+command_topic: "smartthings/Driveway Lights/switch"
+qos: 0
+payload_on: "on"
+payload_off: "off"
+optimistic: false
+retain: true

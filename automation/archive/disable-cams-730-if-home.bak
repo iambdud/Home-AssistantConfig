@@ -1,0 +1,10 @@
+alias: Disable cameras at 7:30pm if we are home (just in case)
+trigger:
+  platform: time
+  after: '19:30'
+condition:
+  condition: state
+  entity_id: group.presence
+  state: 'home'
+action:
+  service: shell_command.set_cams_disabled

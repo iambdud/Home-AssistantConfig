@@ -1,0 +1,5 @@
+cover.left_garage_door:
+  friendly_name: "Ben's Garage Door"
+
+cover.right_garage_door:
+  friendly_name: "Andrea's Garage Door"

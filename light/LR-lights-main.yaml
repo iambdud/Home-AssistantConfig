@@ -1,0 +1,10 @@
+platform: mqtt
+name: "LR Lights Main"
+state_topic: "smartthings/LR Lights Main/switch"
+command_topic: "smartthings/LR Lights Main/switch"
+brightness_state_topic: "smartthings/LR Lights Main/level"
+brightness_command_topic: "smartthings/LR Lights Main/level"
+#brightness_scale: 100
+payload_on: "on"
+payload_off: "off"
+retain: true

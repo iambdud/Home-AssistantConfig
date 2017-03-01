@@ -1,0 +1,5 @@
+platform: mqtt
+name: "MPS Frontdoor Battery Level"
+state_topic: "smartthings/MPS Frontdoor/battery"  
+unit_of_measurement: "%"
+retain: true 

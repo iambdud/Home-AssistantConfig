@@ -1,0 +1,4 @@
+name: Master Bedroom Off
+entities:
+  light.master_bedroom_lights:
+    state: off

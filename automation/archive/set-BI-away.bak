@@ -1,0 +1,11 @@
+alias: Set Blue Iris to Away when both phones are at away
+trigger:
+  platform: state
+  entity_id: group.presence
+  from: 'home'
+action:
+  #service: shell_command.set_bi_away
+  - service: input_select.select_option
+    data:
+      entity_id: input_select.set_biprofile
+      option: away

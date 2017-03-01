@@ -1,0 +1,10 @@
+platform: mqtt
+name: "Breakfast Area Lights"
+state_topic: "smartthings/Breakfast Area Lights/switch"
+command_topic: "smartthings/Breakfast Area Lights/switch"
+brightness_state_topic: "smartthings/Breakfast Area Lights/level"
+brightness_command_topic: "smartthings/Breakfast Area Lights/level"
+brightness_scale: 99
+payload_on: "on"
+payload_off: "off"
+retain: true

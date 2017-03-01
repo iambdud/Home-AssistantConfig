@@ -1,0 +1,22 @@
+alias: stoplight red weekday night
+trigger:
+  platform: time
+  after: '18:00'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: input_boolean.allow_stoplight_automation
+      state: 'on'
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+action:
+  service: input_select.select_option
+  data_template:
+    entity_id: input_select.playroom_stoplight
+    option: 'Red'

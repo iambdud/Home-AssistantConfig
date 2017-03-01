@@ -1,0 +1,10 @@
+alias: Notify if Garage Door ESP module goes offline
+trigger:
+  platform: state
+  entity_id: sensor.garagedooresp
+  state: 'Offline'
+  for: 00:05:00
+action:
+  service: notify.slack_notifications
+  data:
+    message: "Garage Door ESP module is offline"

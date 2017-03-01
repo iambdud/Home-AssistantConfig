@@ -1,0 +1,35 @@
+script.morning:
+  friendly_name: 'Morning'
+  emulated_hue: true
+
+script.afternoon:
+  friendly_name: 'Afternoon'
+  emulated_hue: true
+
+script.evening:
+  friendly_name: 'Evening'
+  emulated_hue: true
+
+script.bedtime:
+  friendly_name: 'Bedtime'
+  emulated_hue: true
+
+script.goodbye:
+  friendly_name: 'Goodbye'
+  emulated_hue: true
+
+script.tv_time:
+  friendly_name: 'TV Time'
+  emulated_hue: true
+
+script.movie_time:
+  friendly_name: 'Movie Time'
+  emulated_hue: true
+
+script.green_light:
+  friendly_name: 'Green Light'
+  emulated_hue: true
+
+script.red_light:
+  friendly_name: 'Red Light'
+  emulated_hue: true

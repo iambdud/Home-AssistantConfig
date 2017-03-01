@@ -1,0 +1,4 @@
+platform: mqtt
+name: "Motion Sensor"
+state_topic: "smartthings/Motion Sensor/temperature"  
+retain: true 

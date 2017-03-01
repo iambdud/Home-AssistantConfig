@@ -1,0 +1,6 @@
+set_bi_home: python /config/shell_command_scripts/setBIProfile.py home
+set_bi_away: python /config/shell_command_scripts/setBIProfile.py away
+set_cams_enabled: python /config/shell_command_scripts/toggleCameraStatus.py enabled
+set_cams_disabled: python /config/shell_command_scripts/toggleCameraStatus.py disabled
+set_bi_profile: python /config/shell_command_scripts/setBIProfile.py {{states.input_select.set_biprofile.state}}
+send_garagecam_snapshot: python /config/shell_command_scripts/camsnapshot.py garagecam

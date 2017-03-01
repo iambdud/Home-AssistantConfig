@@ -1,0 +1,10 @@
+platform: mqtt
+name: "Cabinet Lights"
+state_topic: "smartthings/Cabinet Lights/switch"
+command_topic: "smartthings/Cabinet Lights/switch"
+brightness_state_topic: "smartthings/Cabinet Lights/level"
+brightness_command_topic: "smartthings/Cabinet Lights/level"
+brightness_scale: 99
+payload_on: "on"
+payload_off: "off"
+retain: true

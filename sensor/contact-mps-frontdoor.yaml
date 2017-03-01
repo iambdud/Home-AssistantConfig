@@ -1,0 +1,4 @@
+platform: mqtt
+name: "MPS Frontdoor"
+state_topic: "smartthings/MPS Frontdoor/contact"
+retain: true 

@@ -1,0 +1,31 @@
+jack:
+  alias: "Jack"
+  sequence:
+  - service: light.toggle
+    data:
+      entity_id: light.living_room_lights
+  - delay: '00:00:01'
+  - service: light.toggle
+    data:
+      entity_id: light.living_room_lights
+  - delay: '00:00:01'
+  - service: light.toggle
+    data:
+      entity_id: light.living_room_lights
+  - delay: '00:00:01'
+  - service: light.toggle
+    data:
+      entity_id: light.living_room_lights
+  - delay: '00:00:01'
+  - service: light.toggle
+    data:
+      entity_id: light.living_room_lights
+  - delay: '00:00:01'
+  - service: light.toggle
+    data:
+      entity_id: light.living_room_lights
+  - service: script.sonos_say
+    data:
+      where: living_room
+      volume: 0.4
+      what: 'Hello Jack. How are you today'

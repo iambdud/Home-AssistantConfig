@@ -1,0 +1,11 @@
+alias: Brightness Living Room
+trigger:
+  platform: state
+  entity_id: input_slider.brightness_lr
+action:
+  service: light.turn_on
+  data:
+    entity_id:
+      - light.living_room_lights
+  data_template:
+    brightness: '{{ states( "input_slider.brightness_lr" )|round( 0 ) }}'

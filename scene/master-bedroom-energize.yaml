@@ -1,0 +1,6 @@
+name: Master Bedroom Energized
+entities:
+  light.master_bedroom_lights:
+    state: on
+    brightness: 255
+    color_temp: 156

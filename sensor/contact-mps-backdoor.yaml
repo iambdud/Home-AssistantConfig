@@ -1,0 +1,4 @@
+platform: mqtt
+name: "MPS Backdoor"
+state_topic: "smartthings/MPS Backdoor/contact"  
+retain: true

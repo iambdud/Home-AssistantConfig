@@ -1,0 +1,10 @@
+sensor.jackcam:
+  icon: mdi:webcam
+sensor.ryancam:
+  icon: mdi:webcam
+sensor.livingroomcam:
+  icon: mdi:webcam
+sensor.bonusroomcam:
+  icon: mdi:webcam
+sensor.garagedooresp:
+  icon: mdi:desktop-tower

@@ -1,0 +1,16 @@
+platform: asuswrt
+host: 10.10.10.1
+protocol: telnet
+mode: router
+username: !secret asus_user
+password: !secret asus_pass
+
+# Optional configuration
+
+# If new discovered devices are tracked by default (default: yes)
+track_new_devices: yes
+# Seconds between each scan for new devices (default: 12)
+interval_seconds: 12
+# Seconds to wait till marking someone as not home after not being seen
+# (default: 180)
+consider_home: 180

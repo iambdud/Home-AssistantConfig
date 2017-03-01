@@ -1,0 +1,48 @@
+alias: 'Is the Garage door Open at night - Checks every 20 minutes or 2 minutes after we drive away.'
+trigger:
+  - platform: time
+    minutes: '/20'
+    seconds: '00'
+  - platform: state
+    entity_id: group.presence
+    state: not_home
+    for: 00:02:00
+condition:
+  condition: or
+  conditions:
+    - condition: and
+      conditions:
+        - condition: state
+          entity_id: group.presence
+          state: not_home
+          for: 00:02:00
+        - condition: or
+          conditions:
+            - condition: template
+              value_template: "{{ states('cover.left_garage_door') == 'open' }}"
+            - condition: template
+              value_template: "{{ states('cover.right_garage_door') == 'open' }}"
+    - condition: and
+      conditions:
+        - condition: sun
+          after: 'sunset'
+        - condition: or
+          conditions:
+            - condition: template
+              value_template: "{{ states('cover.left_garage_door') == 'open' }}"
+            - condition: template
+              value_template: "{{ states('cover.right_garage_door') == 'open'}}"
+action:
+  - service: notify.slack_notifications
+    data:
+      #message: "You left a garage door open!!!"
+      message: "A garage door is open. Ben's garage door is {{ states('cover.left_garage_door') }}. Andrea's garage door is {{ states('cover.right_garage_door') }}"
+  - service: script.sonos_say
+  #- service: script.voice_notify
+    #data:
+    data_template:
+      where: living_room
+      volume: 0.3
+      what: "a garage door is still open. Ben's garage door is {{ states('cover.left_garage_door') }} . Andrea's garage door is {{ states('cover.right_garage_door') }}"
+
+  - service: shell_command.send_garagecam_snapshot

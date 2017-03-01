@@ -1,0 +1,7 @@
+platform: mqtt
+state_topic: "smartthings/Motion Sensor Kitchen/motion"
+name: "Motion Sensor Kitchen"
+payload_on: "active"
+payload_off: "inactive"
+device_class: motion
+retain: true

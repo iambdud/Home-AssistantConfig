@@ -1,0 +1,19 @@
+scene.master_bedroom_energized:
+  friendly_name: 'Master Bedroom Energized'
+  emulated_hue: true
+
+scene.master_bedroom_nightlight:
+  friendly_name: 'Master Bedroom Nightlight'
+  emulated_hue: true
+
+scene.master_bedroom_read:
+  friendly_name: 'Master Bedroom Read'
+  emulated_hue: true
+
+scene.master_bedroom_concentrate:
+  friendly_name: 'Master Bedroom Concentrate'
+  emulated_hue: true
+
+scene.master_bedroom_relax:
+  friendly_name: 'Master Bedroom Relax'
+  emulated_hue: true

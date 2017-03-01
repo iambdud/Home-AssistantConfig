@@ -1,0 +1,18 @@
+alias: Brightness Breakfast Area Sync Slider
+trigger:
+  - platform: state
+    entity_id: light.breakfast_area_lights
+    to: "on"
+action:
+  service: input_slider.select_value
+  data:
+    entity_id: input_slider.brightness_breakfast
+  data_template:
+    value: '{{ trigger.to_state.attributes.brightness|int }}'
+  #platform: mqtt
+  #topic: "smartthings/Breakfast Area Lights/level"
+#action:
+  #service: input_slider.select_value
+  #data_template:
+    #entity_id: input_slider.brightness_breakfast
+    #value: '{{ trigger.payload}}'

@@ -1,0 +1,6 @@
+name: Master Bedroom Nightlight
+entities:
+  light.master_bedroom_lights:
+    state: on
+    brightness: 1
+    color_temp: 450 

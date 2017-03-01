@@ -1,0 +1,4 @@
+sensor.mps_frontdoor:
+  icon: mdi:webcam
+sensor.mps_backdoor:
+  icon: mdi:webcam

@@ -1,0 +1,277 @@
+############## views
+
+default_view:
+  name: DEFAULT
+  view: yes
+  icon: mdi:home
+  entities:
+    #- group.presence
+    #- group.weather
+    - group.upstairs
+    #- group.downstairs
+    - group.living_room
+    #- group.LR_separates
+    - group.kitchen
+    - group.breakfast_area
+    - group.master_bedroom
+    #- light.master_bedroom_lights
+    - group.outside_lights
+    - group.garage_doors
+
+
+    #- input_boolean.prevent_stoplight_alexa
+    #- input_boolean.allow_stoplight_automation
+more_things:
+  name: "More Things"
+  view: yes
+  entities:
+    - group.downstairs
+    - group.LR_separates
+    - group.input_booleans
+    - group.scripts
+
+sensor_view:
+  name: Sensors
+  view: yes
+  #icon: mdi:gauge
+  entities:
+    - group.presence
+    - group.temp_sensors
+    - group.motion_sensors
+    - group.doors_windows
+    - group.sensor_battery_levels
+    - group.sonarr
+    - group.devices
+    - group.blueiris
+    #- group.speedtest
+    #- sensor.speedtest_ping
+    #- sensor.speedtest_download
+    #- sensor.speedtest_upload
+    #- sensor.fastcom_download
+#automations_view:
+  #name: Automations
+  #view: yes
+  #entities:
+    #- group.all_automations
+
+media_player_view:
+  name: Media Players
+  view: yes
+  entities:
+    - group.plex
+    - group.sonos_players
+    - media_player.kitchen_speakers
+    - media_player.living_room_tv
+    - media_player.master_bedroom_tv
+scenes_scripts_automations:
+  name: "Scenes Scripts Automations"
+  view: no
+  entities:
+    #- group.all_scenes
+    - group.all_automations
+    - group.all_scripts
+weather_view:
+  name: Weather
+  view: no
+  entities:
+    - group.weather
+
+#########################################
+#### end views
+#########################################
+#### start groups
+
+input_booleans:
+  name: "Input Booleans"
+  entities:
+    - input_boolean.alert_mode
+    - input_boolean.allow_stoplight_automation
+    - input_boolean.guest_mode
+    - input_boolean.last_message
+    - input_boolean.prevent_stoplight_alexa
+    - input_boolean.school_mode
+    - input_boolean.speech_notifications
+    - input_boolean.playroom_stoplight_greenlight
+presence:
+  name: "Presence"
+  entities:
+    - device_tracker.bensoneplusone
+    - device_tracker.andreasiphone
+sonos_players:
+    name: "Sonos"
+    entities:
+      - media_player.living_room
+      - media_player.playroom
+weather:
+  name: Weather
+  entities:
+    #- sensor.dark_sky_summary
+    #- sensor.dark_sky_temperature
+    #- sensor.dark_sky_apparent_temperature
+    #- sensor.dark_sky_wind_speed
+    - sun.sun
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_icon
+    - sensor.dark_sky_nearest_storm_distance
+    - sensor.dark_sky_nearest_storm_bearing
+    - sensor.dark_sky_precip
+    - sensor.dark_sky_precip_intensity
+    - sensor.dark_sky_precip_probability
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_apparent_temperature
+    - sensor.dark_sky_dew_point
+    - sensor.dark_sky_wind_speed
+    - sensor.dark_sky_wind_bearing
+    - sensor.dark_sky_cloud_coverage
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_pressure
+    - sensor.dark_sky_visibility
+    - sensor.dark_sky_ozone
+    - sensor.dark_sky_minutely_summary
+    - sensor.dark_sky_hourly_summary
+    - sensor.dark_sky_daily_summary
+    - sensor.dark_sky_daily_high_temperature
+    - sensor.dark_sky_daily_low_temperature
+    - sensor.dark_sky_daily_high_apparent_temperature
+    - sensor.dark_sky_daily_low_apparent_temperature
+    - sensor.dark_sky_daily_max_precip_intensity
+temp_sensors:
+  name: "Temperature Sensors"
+  entities:
+    - sensor.motion_sensor
+    - sensor.motion_sensor_kitchen
+    - sensor.MPS_Backdoor_Temperature
+    - sensor.MPS_Frontdoor_Temperature
+motion_sensors:
+  name: "Motion Sensors"
+  entities:
+    - binary_sensor.motion_sensor
+    - binary_sensor.motion_sensor_kitchen
+doors_windows:
+  name: "Doors & Windows"
+  entities:
+    - sensor.MPS_Backdoor
+    - sensor.MPS_Frontdoor
+garage_doors:
+  name: "Garage Doors"
+  entities:
+    - cover.left_garage_door
+    - cover.right_garage_door
+devices:
+  name: "Devices"
+  entities:
+    - sensor.garagedooresp
+    - sensor.jackcam
+    - sensor.ryancam
+    - sensor.livingroomcam
+    - sensor.bonusroomcam
+blueiris:
+  name: "Blue Iris"
+  entities:
+    - sensor.blueiris_profile
+    - input_select.set_biprofile
+Plex:
+  name: Plex
+  entities:
+    - sensor.plex
+upstairs:
+  name: Upstairs
+  entities:
+    #- switch.upstairs_hall_outlet
+    - light.upstairs_hall_lamp
+    - climate.upstairs_tstat
+    - input_select.playroom_stoplight
+living_room:
+  name: "Living Room"
+  entities:
+    #- switch.living_room_outlet
+    - light.living_room_lights
+    - light.living_room_lamp
+    #- light.living_room_lights_extended
+    #- input_slider.brightness_lr
+    #- input_slider.brightness_lr_lights
+LR_separates:
+  name: "LR Separates"
+  entities:
+    - light.LR_lights_main
+    - light.LR_lights_extended
+kitchen:
+  name: Kitchen
+  entities:
+    - light.kitchen_lights
+    - light.breakfast_area_lights
+    - light.cabinet_lights
+    #- light.breakfast_1
+    #- light.breakfast_2
+    #- light.breakfast_3
+breakfast_area:
+  name: Breakfast Area
+  entities:
+    #- light.breakfast_1
+    #- light.breakfast_2
+    #- light.breakfast_3
+    - light.breakfast_area_lights
+    #- input_slider.brightness_breakfast
+downstairs:
+  name: Downstairs
+  entities:
+    - light.living_room_lights
+    - light.living_room_lights_extended
+    - light.living_room_lamp
+    - light.kitchen_lights
+    - light.breakfast_area_lights
+    - light.cabinet_lights
+    #- light.breakfast_1
+    #- light.breakfast_2
+    #- light.breakfast_3
+master_bedroom:
+  name: "Master Bedroom"
+  entities:
+    - light.bens_lamp
+    - light.andreas_lamp
+    - input_slider.brightness_mbr
+    - input_slider.color_temp_mbr
+    - input_select.scene_master_bedroom
+outside_lights:
+  name: "Outside Lights"
+  entities:
+    - light.front_porch_lights
+    - light.driveway_lights
+scripts:
+  name: "Scripts"
+  entities:
+    - script.morning
+    - script.afternoon
+    - script.evening
+    - script.goodbye
+    - script.bedtime
+    - script.tv_time
+    - script.movie_time
+    - script.green_light
+    - script.red_light
+sensor_battery_levels:
+  name: Sensor Battery Levels
+  entities:
+    - sensor.MPS_Backdoor_Battery_Level
+    - sensor.MPS_Frontdoor_Battery_Level
+    - sensor.Motion_Sensor_Battery_Level
+    - sensor.Motion_Sensor_Kitchen_Battery_Level
+speedtest:
+  name: speedtest
+  entities:
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+sonarr:
+  name: Sonarr
+  entities:
+    - sensor.sonarr_upcoming
+automations:
+  name: Automations
+  entities:
+    - group.all_automations
+    #- automation.disable_cameras_at_1000pm_if_we_are_home_just_in_case
+    #- automation.disable_cameras_at_730pm_if_we_are_home_just_in_case
+    #- automation.set_blue_iris_to_away_when_both_phones_are_at_away
+    #- automation.set_blue_iris_to_home_when_both_phones_are_at_home
+    #- automation.turn_off_upstairs_hall_lamp_after_no_motion

@@ -1,0 +1,18 @@
+alias: Brightness Living Room Lights Sync Slider
+trigger:
+  - platform: state
+    entity_id: light.living_room_lights
+    to: "on"
+action:
+  service: input_slider.select_value
+  data:
+    entity_id: input_slider.lr_lights
+  data_template:
+    value: '{{ trigger.to_state.attributes.brightness|float }}'
+  #platform: mqtt
+  #topic: "smartthings/Breakfast Area Lights/level"
+#action:
+  #service: input_slider.select_value
+  #data_template:
+    #entity_id: input_slider.brightness_breakfast
+    #value: '{{ trigger.payload}}'

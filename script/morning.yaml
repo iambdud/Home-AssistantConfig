@@ -1,0 +1,28 @@
+morning:
+  alias: "morning"
+  sequence:
+  - service: script.sonos_say
+  #- service: script.voice_notify
+    #data:
+    data_template:
+      where: living_room
+      volume: 0.4
+      what: 'good morning'
+  - service: mqtt.publish
+    data_template:
+      topic: "smartthings/Breakfast Area Lights/level"
+      payload: '100'
+  - service: mqtt.publish
+    data_template:
+      topic: "smartthings/Living Room Lamp/level"
+      payload: '100'
+  - service: mqtt.publish
+    data_template:
+      topic: "smartthings/Cabinet Lights/level"
+      payload: '100'
+  - service: light.turn_on
+    data:
+      entity_id: light.cabinet_lights, light.breakfast_area_lights, light.living_room_lamp, light.kitchen_lights
+  - service: scene.turn_on
+    data:
+      entity_id: scene.master_bedroom_relax

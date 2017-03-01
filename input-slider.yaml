@@ -1,0 +1,27 @@
+brightness_breakfast:
+  name: Brightness
+  initial: 1
+  min: 1
+  max: 255
+  step: 1
+
+brightness_lr_lights:
+  name: 'Brightness'
+  initial: 1
+  min: 0
+  max: 99
+  step: 1
+
+brightness_mbr:
+  name: 'Brightness'
+  initial: 1
+  min: 1
+  max: 255
+  step: 1
+
+color_temp_mbr:
+  name: 'Color Temp'
+  initial: 154
+  min: 154
+  max: 500
+  step: 1

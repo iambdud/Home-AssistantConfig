@@ -1,0 +1,74 @@
+group.all_devices:
+  emulated_hue: false
+
+group.all_automations:
+  emulated_hue: false
+
+group.all_scripts:
+  emulated_hue: false
+
+group.all_switches:
+  emulated_hue: false
+
+group.automations:
+  emulated_hue: false
+
+group.doors_windows:
+  emulated_hue: false
+
+group.motion_sensors:
+  emulated_hue: false
+
+group.plex:
+  emulated_hue: false
+
+group.presence:
+  emulated_hue: false
+
+group.sensor_battery_levels:
+  emulated_hue: false
+
+group.sonos_players:
+  emulated_hue: false
+
+group.temp_sensors:
+  emulated_hue: false
+
+group.speedtest:
+  emulated_hue: false
+
+group.upstairs:
+  emulated_hue: false
+
+group.weather:
+  emulated_hue: false
+
+group.all_covers:
+  emulated_hue: false
+
+group.garage_doors:
+  emulated_hue: false
+
+group.sonarr:
+  emulated_hue: false
+
+group.devices:
+  emulated_hue: false
+
+group.blueiris:
+  emulated_hue: false
+
+group.weather_view:
+  emulated_hue: false
+
+group.master_bedroom:
+  emulated_hue: false
+
+group.lr_separates:
+  emulated_hue: false
+
+group.scenes_scripts_automations:
+  emulated_hue: false
+
+group.scripts:
+  emulated_hue: false

@@ -1,0 +1,44 @@
+intents:
+  WhereAreWeIntent:
+    speech:
+      type: plaintext
+      text: >
+        {%- if is_state('device_tracker.bensoneplusone', 'home') and
+             is_state('device_tracker.andreasiphone', 'home') -%}
+        You are both home, you silly
+        {%- else -%}
+          Andrea is at {{ states("device_tracker.andreasiphone") }}
+          and Ben is at {{ states("device_tracker.bensoneplusone") }}
+        {% endif %}
+
+  LocateIntent:
+    #action:
+      #service: notify.notify
+      #data_template:
+        #message: The location of {{ User }} has been queried via Alexa.
+    speech:
+      type: plaintext
+      text: >
+        {%- for state in states.device_tracker -%}
+          {%- if state.name.lower() == User.lower() -%}
+            {%- if state.state == "not_home" -%}
+              {{ state.name }} is not home}
+            {%- else -%}
+              {{ state.name }} is at {{ state.state }}
+            {%- endif -%}
+          {%- endif -%}
+        {%- else -%}
+          I am sorry, I do not know where {{ User }} is.
+        {%- endfor -%}
+    card:
+      type: simple
+      title: Where are we
+      content: some content
+  ActivateSceneIntent:
+    action:
+      service: scene.turn_on
+      data_template:
+        entity_id: scene.{{ Scene | replace(" ", "_") }}
+    speech:
+      type: plaintext
+      text: !include alexa_confirm.yaml

@@ -1,0 +1,15 @@
+name: bedtime
+entities:
+  group.living_room:
+    state: off
+  light.breakfast_area_lights:
+    state: off
+  light.kitchen_lights:
+    state: off
+  group.master_bedroom:
+    state: on
+  scene.master_bedroom_relax:
+    state: on
+  light.cabinet_lights:
+    brightness: 127
+    state: on

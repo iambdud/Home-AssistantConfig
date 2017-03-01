@@ -1,0 +1,14 @@
+upstairs_hall_lamp_set_timeout:
+  alias: "Turn on light and set timeout"
+  sequence:
+  # Cancel ev. old timers
+  - service: script.turn_off
+    data:
+      entity_id: script.upstairs_hall_lamp_timeout
+  # turn on light
+  - service: light.turn_on
+    entity_id: light.upstairs_hall_lamp
+  # Set new timer
+  - service: script.turn_on
+    data:
+      entity_id: script.upstairs_hall_lamp_timeout

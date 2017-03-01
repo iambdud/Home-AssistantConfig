@@ -1,0 +1,8 @@
+prevent_stoplight_alexa:
+  name: prevent stoplight from changing via alexa
+  initial: on
+  icon: mdi:traffic-light
+allow_stoplight_automation:
+  name: allow stoplight automations to run
+  initial: on
+  icon: mdi:traffic-light

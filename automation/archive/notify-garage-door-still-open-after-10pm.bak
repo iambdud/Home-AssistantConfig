@@ -1,0 +1,18 @@
+alias: 'Notify if either garage door isleft open at 10pm'
+trigger:
+  platform: time
+  after: '22:00'
+  #after: '15:22'
+condition:
+  condition: state
+  entity_id: group.garage_doors
+  state: 'open'
+action:
+  - service: notify.slack_notifications
+    data:
+      message: "You left a garage door open!!!"
+  - service: script.sonos_say
+    data:
+      where: living_room
+      volume: 0.3
+      what: 'a garage door is still open'

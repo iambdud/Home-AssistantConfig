@@ -1,0 +1,12 @@
+name: "TV time"
+entities:
+  media_player.living_room_tv:
+    state: on
+  group.kitchen:
+    state: off
+  light.living_room_lights:
+    brightness: 127
+    state: on
+  #light.living_room_lights_extended:
+    #brightness: 40
+    #state: on

@@ -1,0 +1,8 @@
+input_slider.brightness_mbr:
+  icon: mdi:brightness-6
+input_slider.brightness_breakfast:
+  icon: mdi:brightness-6
+input_slider.brightness_lr_lights:
+  icon: mdi:brightness-6
+input_slider.color_temp_mbr:
+  icon: mdi:brightness-6

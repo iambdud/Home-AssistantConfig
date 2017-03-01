@@ -1,0 +1,12 @@
+name: morning
+entities:
+  group.downstairs:
+    state: on
+  scene.master_bedroom_relax:
+    state: on
+  light.living_room_lights:
+    brightness: 127
+  light.living_room_lights_extended:
+    brightness: 127
+  light.cabinet_lights:
+    brightness: 255

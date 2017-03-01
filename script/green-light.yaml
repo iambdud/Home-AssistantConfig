@@ -1,0 +1,11 @@
+green_light:
+  alias: "green light"
+  sequence:
+  - condition: state
+    entity_id: input_boolean.prevent_stoplight_alexa
+    state: "off"
+    
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.playroom_stoplight
+      option: "Green"

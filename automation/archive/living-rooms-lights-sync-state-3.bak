@@ -1,0 +1,13 @@
+alias: Turn Off LR Lights Extended when LR Lights Turn Off
+trigger:
+  - platform: state
+    entity_id: light.living_room_lights
+    to: "off"
+condition:
+  condition: state
+  entity_id: light.living_room_lights_extended
+  state: "on"
+action:
+  service: light.turn_off
+  data:
+    entity_id: light.living_room_lights_extended

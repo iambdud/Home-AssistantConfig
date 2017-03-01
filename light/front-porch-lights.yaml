@@ -1,0 +1,9 @@
+platform: mqtt
+name: "Front Porch Lights"
+state_topic: "smartthings/Front Porch Lights/switch"
+command_topic: "smartthings/Front Porch Lights/switch"
+qos: 0
+payload_on: "on"
+payload_off: "off"
+optimistic: false
+retain: true

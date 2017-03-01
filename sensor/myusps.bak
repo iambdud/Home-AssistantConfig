@@ -1,0 +1,3 @@
+platform: usps
+username: !secret myusps_user
+password: !secret myusps_password

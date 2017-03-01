@@ -1,0 +1,23 @@
+alias: stoplight green
+trigger:
+  - platform: time
+    after: '06:30'
+  - platform: time
+    after: '18:00'
+  #testing:
+  #after: '17:13'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: input_boolean.allow_stoplight_automation
+      state: 'on'
+    - condition: time
+      weekday:
+        - sat
+        - sun
+action:
+  service: input_select.select_option
+  data_template:
+    entity_id: input_select.playroom_stoplight
+    option: 'Green'

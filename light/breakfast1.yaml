@@ -1,0 +1,9 @@
+platform: mqtt
+name: "Breakfast 1"
+state_topic: "smartthings/Breakfast 1/switch"
+command_topic: "smartthings/Breakfast 1/switch"
+brightness_state_topic: "smartthings/Breakfast 1/level"
+brightness_command_topic: "smartthings/Breakfast 1/level"
+payload_on: "on"
+payload_off: "off"
+retain: true

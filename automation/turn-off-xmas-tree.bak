@@ -1,0 +1,11 @@
+alias: 'Turn off Christmas Tree'
+trigger:
+  platform: time
+  after: '22:00:00'
+condition:
+  condition: state
+  entity_id: switch.living_room_outlet
+  state: 'on'
+action:
+  service: switch.turn_off
+  entity_id: switch.living_room_outlet
