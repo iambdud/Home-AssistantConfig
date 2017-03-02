@@ -1,17 +1,17 @@
-alias: stoplight off at 9pm or 8am
-trigger:
-  - platform: time
-    after: '21:00'
-  - platform: time
-    after: '08:30'
-  #testing:
-  #after: '17:11'
-condition:
-  condition: state
-  entity_id: input_boolean.allow_stoplight_automation
-  state: 'on'
-action:
-  service: input_select.select_option
-  data_template:
-    entity_id: input_select.playroom_stoplight
-    option: 'Off'
+- alias: stoplight off at 9pm or 8am
+  trigger:
+    - platform: time
+      after: '21:00'
+    - platform: time
+      after: '08:30'
+    #testing:
+    #after: '17:11'
+  condition:
+    condition: state
+    entity_id: input_boolean.allow_stoplight_automation
+    state: 'on'
+  action:
+    service: input_select.select_option
+    data_template:
+      entity_id: input_select.playroom_stoplight
+      option: 'Off'

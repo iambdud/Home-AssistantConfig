@@ -1,9 +1,9 @@
-alias: Notify if BI profile is 'unknown'
-trigger:
-  platform: state
-  entity_id: sensor.blueiris_profile
-  to: 'unknown'
-action:
-  service: notify.slack_notifications
-  data:
-    message: "BI profile switched to 'unknown'"
+- alias: Notify if BI profile is 'unknown'
+  trigger:
+    platform: state
+    entity_id: sensor.blueiris_profile
+    to: 'unknown'
+  action:
+    service: notify.slack_notifications
+    data:
+      message: "BI profile switched to 'unknown'"

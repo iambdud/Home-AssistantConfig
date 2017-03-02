@@ -1,25 +1,25 @@
-alias: Scene Master Bedroom
-trigger:
-  platform: state
-  entity_id: input_select.scene_master_bedroom
-action:
-  - service: scene.turn_on
-    data_template:
-      entity_id: >
-        {% if is_state( "input_select.scene_master_bedroom", "Off" ) %}
-          scene.master_bedroom_off      
-        {%-elif is_state( "input_select.scene_master_bedroom", "Read" ) %}
-          scene.master_bedroom_read
-        {%-elif is_state( "input_select.scene_master_bedroom", "Relax" ) %}
-          scene.master_bedroom_relax
-        {%-elif is_state( "input_select.scene_master_bedroom", "Nightlight" ) %}
-          scene.master_bedroom_nightlight
-        {%-elif is_state( "input_select.scene_master_bedroom", "Concentrate" ) %}
-          scene.master_bedroom_concentrate
-        {%-elif is_state( "input_select.scene_master_bedroom", "Energized" ) %}
-          scene.master_bedroom_energized
-        {% endif %}
-  - service: input_select.select_option
-    data:
-      entity_id: input_select.scene_master_bedroom
-      option: "-"
+- alias: Scene Master Bedroom
+  trigger:
+    platform: state
+    entity_id: input_select.scene_master_bedroom
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state( "input_select.scene_master_bedroom", "Off" ) %}
+            scene.master_bedroom_off
+          {%-elif is_state( "input_select.scene_master_bedroom", "Read" ) %}
+            scene.master_bedroom_read
+          {%-elif is_state( "input_select.scene_master_bedroom", "Relax" ) %}
+            scene.master_bedroom_relax
+          {%-elif is_state( "input_select.scene_master_bedroom", "Nightlight" ) %}
+            scene.master_bedroom_nightlight
+          {%-elif is_state( "input_select.scene_master_bedroom", "Concentrate" ) %}
+            scene.master_bedroom_concentrate
+          {%-elif is_state( "input_select.scene_master_bedroom", "Energized" ) %}
+            scene.master_bedroom_energized
+          {% endif %}
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.scene_master_bedroom
+        option: "-"

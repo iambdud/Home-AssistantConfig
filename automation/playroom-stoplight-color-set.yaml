@@ -1,11 +1,11 @@
-alias: "Set stoplight color to MQTT"
-trigger:
-  platform: state
-  entity_id: input_select.playroom_stoplight
-action:
-  service: mqtt.publish
-  data_template:
-    topic: "home/playroom stoplight/color"
-    retain: true
-    payload: '{{states("input_select.playroom_stoplight")}}'
-    #payload: test
+- alias: "Set stoplight color to MQTT"
+  trigger:
+    platform: state
+    entity_id: input_select.playroom_stoplight
+  action:
+    service: mqtt.publish
+    data_template:
+      topic: "home/playroom stoplight/color"
+      retain: true
+      payload: '{{states("input_select.playroom_stoplight")}}'
+      #payload: test

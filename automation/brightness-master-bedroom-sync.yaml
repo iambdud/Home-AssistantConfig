@@ -1,11 +1,11 @@
-alias: Brightness Master Bedroom Sync Slider
-trigger:
-  - platform: state
-    entity_id: light.master_bedroom_lights
-    to: "on"
-action:
-  service: input_slider.select_value
-  data:
-    entity_id: input_slider.brightness_mbr
-  data_template:
-    value: '{{ trigger.to_state.attributes.brightness|float }}'
+- alias: Brightness Master Bedroom Sync Slider
+  trigger:
+    - platform: state
+      entity_id: light.master_bedroom_lights
+      to: "on"
+  action:
+    service: input_slider.select_value
+    data:
+      entity_id: input_slider.brightness_mbr
+    data_template:
+      value: '{{ trigger.to_state.attributes.brightness|float }}'

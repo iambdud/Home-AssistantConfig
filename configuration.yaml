@@ -74,7 +74,7 @@ group: !include group.yaml
 
 shell_command: !include shell_command.yaml
 
-automation: !include_dir_list automation
+automation: !include_dir_merge_list automation
 
 climate: !include_dir_list climate
 

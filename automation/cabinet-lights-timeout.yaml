@@ -1,11 +1,11 @@
-alias: Turn off cabinet lights after no motion
-trigger:
-  platform: state
-  entity_id: binary_sensor.motion_sensor_kitchen
-  to: 'on'
-condition:
-  condition: time
-  after: '18:00'
-action:
-  service: homeassistant.turn_on
-  entity_id: script.cabinet_lights_set_timeout
+- alias: Turn off cabinet lights after no motion
+  trigger:
+    platform: state
+    entity_id: binary_sensor.motion_sensor_kitchen
+    to: 'on'
+  condition:
+    condition: time
+    after: '18:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: script.cabinet_lights_set_timeout

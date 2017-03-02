@@ -1,11 +1,11 @@
-alias: Color Temp Master Bedroom Sync
-trigger:
-  - platform: state
-    entity_id: light.master_bedroom_lights
-    to: "on"
-action:
-  service: input_slider.select_value
-  data:
-    entity_id: input_slider.color_temp_mbr
-  data_template:
-    value: '{{ trigger.to_state.attributes.color_temp|float }}'
+- alias: Color Temp Master Bedroom Sync
+  trigger:
+    - platform: state
+      entity_id: light.master_bedroom_lights
+      to: "on"
+  action:
+    service: input_slider.select_value
+    data:
+      entity_id: input_slider.color_temp_mbr
+    data_template:
+      value: '{{ trigger.to_state.attributes.color_temp|float }}'

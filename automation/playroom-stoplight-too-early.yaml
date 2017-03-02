@@ -1,15 +1,15 @@
-alias: stoplight to blue at 4am
-trigger:
-  platform: time
-  after: '04:00'
-  #test:
-  #after: '17:12'
-condition:
-  condition: state
-  entity_id: input_boolean.allow_stoplight_automation
-  state: 'on'
-action:
-  service: input_select.select_option
-  data_template:
-    entity_id: input_select.playroom_stoplight
-    option: 'Blue'
+- alias: stoplight to blue at 4am
+  trigger:
+    platform: time
+    after: '04:00'
+    #test:
+    #after: '17:12'
+  condition:
+    condition: state
+    entity_id: input_boolean.allow_stoplight_automation
+    state: 'on'
+  action:
+    service: input_select.select_option
+    data_template:
+      entity_id: input_select.playroom_stoplight
+      option: 'Blue'

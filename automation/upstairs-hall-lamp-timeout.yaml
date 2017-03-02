@@ -1,8 +1,8 @@
-alias: Turn off upstairs hall lamp after no motion
-trigger:
-  platform: state
-  entity_id: binary_sensor.motion_sensor
-  to: 'on'
-action:
-  service: homeassistant.turn_on
-  entity_id: script.upstairs_hall_lamp_set_timeout
+- alias: Turn off upstairs hall lamp after no motion
+  trigger:
+    platform: state
+    entity_id: binary_sensor.motion_sensor
+    to: 'on'
+  action:
+    service: homeassistant.turn_on
+    entity_id: script.upstairs_hall_lamp_set_timeout

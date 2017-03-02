@@ -1,12 +1,12 @@
-alias: 'Dim cabinet lights at 11pm'
-trigger:
-  platform: time
-  after: '23:00'
-action:
-  - service: mqtt.publish
-    data_template:
-      topic: "smartthings/Cabinet Lights/level"
-      payload: '40'
-  - service: light.turn_on
-    data:
-      entity_id: light.cabinet_lights
+- alias: 'Dim cabinet lights at 11pm'
+  trigger:
+    platform: time
+    after: '23:00'
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "smartthings/Cabinet Lights/level"
+        payload: '40'
+    - service: light.turn_on
+      data:
+        entity_id: light.cabinet_lights

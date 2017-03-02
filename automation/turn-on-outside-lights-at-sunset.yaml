@@ -1,11 +1,11 @@
-alias: 'Turn on outside lights at sunset'
-trigger:
-  platform: sun
-  event: sunset
-condition:
-  condition: state
-  entity_id: group.outside_lights
-  state: 'off'
-action:
-  service: light.turn_on
-  entity_id: group.outside_lights
+- alias: 'Turn on outside lights at sunset'
+  trigger:
+    platform: sun
+    event: sunset
+  condition:
+    condition: state
+    entity_id: group.outside_lights
+    state: 'off'
+  action:
+    service: light.turn_on
+    entity_id: group.outside_lights

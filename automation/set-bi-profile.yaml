@@ -1,6 +1,6 @@
-alias: Set Blue Iris profile
-trigger:
-  platform: state
-  entity_id: input_select.set_biprofile
-action:
-  service: shell_command.set_bi_profile
+- alias: Set Blue Iris profile
+  trigger:
+    platform: state
+    entity_id: input_select.set_biprofile
+  action:
+    service: shell_command.set_bi_profile
