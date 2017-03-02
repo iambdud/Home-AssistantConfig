@@ -14,43 +14,35 @@ homeassistant:
 
 # Show links to resources in log and frontend
 #introduction:
-
 # Enables the frontend
 frontend:
-
 http:
   # Uncomment this to add a password (recommended!)
    api_password: !secret api_password
-
 # Checks for available updates
 updater:
-
 # Discover some devices automatically
 #discovery:
-
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
-
 # Enables support for tracking state changes over time.
 history:
-
 # View all events in a logbook
 logbook:
-
 # Track the sun
 sun:
-
 #logger:
   #default: critical
   #logs:
     #homeassistant.components.device_tracker: info
-
+recorder:
+  purge_days: 60
+  db_url: !secret db_url
 mqtt:
   broker: 10.10.10.101
   port: 1883
   client_id: home-assistant-1
   #keepalive: 60
-
 tts:
   - platform: google
     cache: true
@@ -60,69 +52,26 @@ tts:
     aws_access_key_id: !secret aws_access_key_ID
     aws_secret_access_key: !secret aws_secret_access_key
     region_name: 'us-east-1'
-
-switch: !include switch.yaml
-
-sensor: !include_dir_list sensor
-
-binary_sensor: !include_dir_list binary_sensor
-
-#device_tracker: !include device_tracker.yaml
-device_tracker: !include_dir_list device_tracker
-
-group: !include group.yaml
-
-shell_command: !include shell_command.yaml
-
-automation: !include_dir_merge_list automation
-
-climate: !include_dir_list climate
-
-notify: !include notification.yaml
-
-media_player: !include_dir_list media_player
-
-light: !include_dir_list light
-
-input_slider: !include input-slider.yaml
-#input_slider: !include_dir_list input_sliders
-
-input_select: !include input-select.yaml
-#input_select: !include_dir_named input_selects
-
-#input_boolean: !include input-booleans.yaml
-input_boolean: !include_dir_merge_named input_boolean
-
-#script: !include scripts.yaml
-script: !include_dir_merge_named script
-
-alexa: !include alexa.yaml
-
-scene: !include_dir_list scene
-
-cover: !include_dir_list cover
-
 emulated_hue:
-  #type: alexa
-  #host_ip: 10.10.10.101
-  #listen_port: 8300
   listen_port: 80
-  #off_maps_to_on_domains:
-    #- script
-    #- scene
   expose_by_default: false
-  #exposed_domains:
-    #- light
-    #- scene
-    #- switch
-    #- group
-    #- media_player
-    #- script
-    #- input_boolean
-
 ifttt:
   key: !secret ifttt_key
 
-recorder:
-  purge_days: 60
-  db_url: !secret db_url
+alexa: !include alexa.yaml
+automation: !include_dir_merge_list automation
+binary_sensor: !include_dir_list binary_sensor
+climate: !include_dir_list climate
+cover: !include_dir_list cover
+device_tracker: !include_dir_list device_tracker
+group: !include group.yaml
+input_boolean: !include_dir_merge_named input_boolean
+input_select: !include input-select.yaml
+input_slider: !include input-slider.yaml
+media_player: !include_dir_list media_player
+notify: !include notification.yaml
+scene: !include_dir_list scene
+script: !include_dir_merge_named script
+sensor: !include_dir_list sensor
+shell_command: !include shell_command.yaml
+switch: !include switch.yaml
