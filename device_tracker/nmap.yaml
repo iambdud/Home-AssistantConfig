@@ -1,2 +1,4 @@
 platform: nmap_tracker
 hosts: 10.10.10.1/24
+exclude:
+  - 10.10.10.101
