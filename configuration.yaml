@@ -104,7 +104,7 @@ cover: !include_dir_list cover
 
 emulated_hue:
   #type: alexa
-  #host_ip: 10.10.10.101
+  host_ip: 10.10.10.101
   #listen_port: 8300
   listen_port: 80
   #off_maps_to_on_domains:
