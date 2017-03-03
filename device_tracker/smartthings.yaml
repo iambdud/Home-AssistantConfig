@@ -1,0 +1,4 @@
+platform: mqtt
+devices:
+  ben_st_presence: smartthings/Ben ST Presence/presence
+  andrea_st_presence: smartthings/Andrea ST Presence/presence
