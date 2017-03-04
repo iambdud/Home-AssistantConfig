@@ -1,22 +1,22 @@
 group.all_lights:
   friendly_name: 'All Lights'
-  emulated_hue: true
+  #emulated_hue: true
 
 group.all_switches:
   friendly_name: 'All Switches'
-  emulated_hue: true
+  #emulated_hue: true
 
 group.downstairs:
   friendly_name: 'Downstairs'
-  emulated_hue: true
+  #emulated_hue: true
 
 group.living_room:
   friendly_name: 'Living Room'
-  emulated_hue: true
+  #emulated_hue: true
 
 group.kitchen:
   friendly_name: 'Kitchen'
-  emulated_hue: true
+  #emulated_hue: true
 
 group.outside_lights:
   friendly_name: 'Outside Lights'
