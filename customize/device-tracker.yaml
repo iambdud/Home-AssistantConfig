@@ -3,7 +3,7 @@ device_tracker.bensoneplusone:
 
 device_tracker.andreasiphone:
   friendly_name: Andrea
-device_tracker.ben_st_presence:
-  friendly_name: Ben ST
-device_tracker.andrea_st_presence:
-  friendly_name: Andrea ST
+#device_tracker.ben_st_presence:
+  #friendly_name: Ben ST
+#device_tracker.andrea_st_presence:
+  #friendly_name: Andrea ST
