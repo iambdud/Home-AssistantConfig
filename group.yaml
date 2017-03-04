@@ -97,6 +97,8 @@ presence:
   entities:
     - device_tracker.bensoneplusone
     - device_tracker.andreasiphone
+    - device_tracker.ben_st_presence
+    - device_tracker.andrea_st_presence
 sonos_players:
     name: "Sonos"
     entities:

@@ -40,10 +40,7 @@ logbook:
 # Track the sun
 sun:
 
-#logger:
-  #default: critical
-  #logs:
-    #homeassistant.components.device_tracker: info
+logger: !include logger.yaml
 
 mqtt:
   broker: 10.10.10.101
