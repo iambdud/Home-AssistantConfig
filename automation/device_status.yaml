@@ -6,10 +6,10 @@
     platform: state
     entity_id:
       - sensor.garagedooresp
-      - sensor.jackcam
-      - sensor.ryancam
-      - sensor.livingroomcam
-      - sensor.bonusroomcam
+      #- sensor.jackcam
+      #- sensor.ryancam
+      #- sensor.livingroomcam
+      #- sensor.bonusroomcam
     state: 'Offline'
     for: 00:05:00
   action:
