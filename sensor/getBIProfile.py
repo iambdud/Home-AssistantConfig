@@ -44,5 +44,7 @@ if session != "":
 				print("away")
 			elif r.json()['data']['profile'] == '3':
 				print("night")
+			elif r.json()['data']['profile'] == '4':
+				print("alert")
 			else:
 				print("unknown")
