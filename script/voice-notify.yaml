@@ -1,5 +1,5 @@
 ######################################################################################################
-###Script to send notifications to the a specified sonos speaker during normal hours and only when we are home! Call like this:
+###Script to send notifications to the a specified media player during normal hours and only when we are home! Call like this:
   # action:
     # service: script.Voice_notify
     # data_template:
@@ -37,26 +37,20 @@ voice_notify:
         - condition: template
           value_template: >
             {% if is_state('media_player.' ~ where, 'playing') %}
-              true
+              false
             {% else %}
               true
             {% endif %}
-    - service: media_player.sonos_snapshot
-      data_template:
-        entity_id: "{{ 'media_player.' ~ where }}"
-    - service: media_player.sonos_unjoin
-      data_template:
-        entity_id: "{{ 'media_player.' ~ where }}"
     - service: media_player.volume_set
       data_template:
         entity_id: "{{ 'media_player.' ~ where }}"
         volume_level: >
           {% if now().strftime("%H")|int < 12 %}
-          0.20
+          0.25
           {% elif now().strftime("%H")|int < 18 %}
           0.45
           {% else %}
-          0.25
+          0.20
           {% endif %}
     - service: mqtt.publish
       data_template:
@@ -64,33 +58,20 @@ voice_notify:
         topic: 'home/notifications/lastmsg'
         retain: true
 
-    - service: tts.google_say
+    - service: tts.amazon_polly_say
       data_template:
         entity_id: "{{ 'media_player.' ~ where }}"
-        #message: >
-          #{% if now().strftime("%H")|int < 12 %}
-          #"Good morning.
-          #{% elif now().strftime("%H")|int < 18 %}
-          #"Good afternoon.
-          #{% else %}
-          #"Good evening.
-          #{% endif %}
-          #{{ what }}"
-        message: "{{ what }}"
+        message: >
+          {% if now().strftime("%H")|int < 12 %}
+          "Good morning.
+          {% elif now().strftime("%H")|int < 18 %}
+          "Good afternoon.
+          {% else %}
+          "Good evening.
+          {% endif %}
+          {{ what }}"
+        #message: "{{ what }}"
         cache: true
-    - delay: >
-        {% set duration = states.media_player[where].attributes.media_duration %}
-        {% if duration > 0 %}
-          {% set duration = duration - 1 %}
-        {% endif %}
-        {% set seconds = duration % 60 %}
-        {% set minutes = (duration / 60)|int % 60 %}
-        {% set hours = (duration / 3600)|int %}
-        {{ [hours, minutes, seconds]|join(':') }}
-
-    - service: media_player.sonos_restore
-      data_template:
-        entity_id: "{{ 'media_player.' ~ where }}"
 
     - service: input_boolean.turn_off
       entity_id: input_boolean.last_message

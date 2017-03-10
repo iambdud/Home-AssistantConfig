@@ -2,6 +2,7 @@
   trigger:
     - platform: time
       minutes: '/20'
+      #minutes: '/5'
       seconds: '00'
     - platform: state
       entity_id: group.presence
@@ -36,13 +37,25 @@
     - service: notify.slack_notifications
       data:
         #message: "You left a garage door open!!!"
-        message: "A garage door is open. Ben's garage door is {{ states('cover.left_garage_door') }}. Andrea's garage door is {{ states('cover.right_garage_door') }}"
-    - service: script.sonos_say
-    #- service: script.voice_notify
+        #message: "A garage door is open. Ben's garage door is {{ states('cover.left_garage_door') }}. Andrea's garage door is {{ states('cover.right_garage_door') }}"
+        message: >
+          A garage door is open.
+          {%- if is_state("cover.left_garage_door","open") %} Ben's garage door is open.
+          {%- endif -%}
+          {%- if is_state("cover.right_garage_door","open") %} Andrea's garage door is open.
+          {%- endif -%}
+    #- service: script.sonos_say
+    - service: script.voice_notify
       #data:
       data_template:
-        where: living_room
-        volume: 0.3
-        what: "a garage door is still open. Ben's garage door is {{ states('cover.left_garage_door') }} . Andrea's garage door is {{ states('cover.right_garage_door') }}"
+        where: family_room_home
+        #volume: 0.3
+        #what: "a garage door is still open. Ben's garage door is {{ states('cover.left_garage_door') }} . Andrea's garage door is {{ states('cover.right_garage_door') }}"
+        what: >
+          A garage door is open.
+          {%- if is_state("cover.left_garage_door","open") %} Ben's garage door is open.
+          {%- endif -%}
+          {%- if is_state("cover.right_garage_door","open") %} Andrea's garage door is open.
+          {%- endif -%}
 
     - service: shell_command.send_garagecam_snapshot
