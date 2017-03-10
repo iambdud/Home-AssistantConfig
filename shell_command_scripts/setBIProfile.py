@@ -58,6 +58,9 @@ elif sys.argv[1] == "away":
 elif sys.argv[1] == "night":
 	prof = 3
 	enabled = False
+elif sys.argv[1] == "alert":
+    prof = 4
+    enabled = True
 else:
 	quit
 

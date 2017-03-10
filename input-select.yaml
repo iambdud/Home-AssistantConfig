@@ -6,6 +6,7 @@ set_biprofile:
     - "home"
     - "away"
     - "night"
+    - "alert"
 scene_master_bedroom:
   name: Scene
   icon: mdi:brightness-auto

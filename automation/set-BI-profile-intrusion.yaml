@@ -1,0 +1,22 @@
+######################################################################################################
+###Automation to set BI profile to alert if the doors or garage open when we are not home
+
+######################################################################################################
+
+- alias: 'Set BI to alert if doors or garage open while we are not home'
+  trigger:
+    - platform: state
+      entity_id: group.doors_windows
+      state: open
+    - platform: state
+      entity_id: group.garage_doors
+      state: open
+  condition:
+    condition: state
+    entity_id: group.presence
+    state: 'not_home'
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.set_biprofile
+        option: 'alert'
