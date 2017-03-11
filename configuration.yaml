@@ -41,6 +41,7 @@ logbook:
 sun:
 
 logger: !include logger.yaml
+#logger:
 
 mqtt:
   broker: 10.10.10.101
@@ -80,6 +81,8 @@ notify: !include notification.yaml
 media_player: !include_dir_list media_player
 
 light: !include_dir_list light
+
+lock: !include_dir_list lock
 
 input_slider: !include input-slider.yaml
 #input_slider: !include_dir_list input_sliders
