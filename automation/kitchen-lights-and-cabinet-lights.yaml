@@ -1,0 +1,48 @@
+#####################################################################################
+###  If the Kitchen Lights go on for more than 5 minutes, dim the cabinet lights
+###
+#####################################################################################
+
+- alias: Kitchen lights on - Cabinet lights dim
+  trigger:
+    - platform: state
+      entity_id: light.kitchen_lights
+      state: 'on'
+      for: '00:05:00'
+
+  condition:
+    - condition: state
+      entity_id: light.cabinet_lights
+      state: 'on'
+
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "smartthings/Cabinet Lights/level"
+        payload: '25'
+    - service: light.turn_on
+      data:
+        entity_id: light.cabinet_light
+
+##############################################################################
+### If the kitchen lights go off turn on the cabinet lights (different brightness based on time of day)
+
+- alias: Kitchen lights off - turn on cabinet lights
+  trigger:
+    - platform: state
+      entity_id: light.kitchen_lights
+      state: 'off'
+      #for: '00:05:00'
+
+  condition:
+    - condition: time
+      after: '15:00:00'
+
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "smartthings/Cabinet Lights/level"
+        payload: '{{ 75 if now().strftime("%H")|int < 23 else 40 }}'
+    - service: light.turn_on
+      data:
+        entity_id: light.cabinet_light

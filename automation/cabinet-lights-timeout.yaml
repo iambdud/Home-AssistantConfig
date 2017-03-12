@@ -4,8 +4,11 @@
     entity_id: binary_sensor.motion_sensor_kitchen
     to: 'on'
   condition:
-    condition: time
-    after: '18:00'
+    - condition: time
+      after: '15:00'
+    - condition: state
+      entity_id: light.kitchen_lights
+      state: 'off'
   action:
     service: homeassistant.turn_on
     entity_id: script.cabinet_lights_set_timeout
