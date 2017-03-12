@@ -9,10 +9,10 @@
       entity_id: group.presence
       to: 'home'
   action:
-    #- service: input_select.select_option
-      #data_template:
-        #entity_id: input_select.set_biprofile
-        #option: 'home'
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.set_biprofile
+        option: 'home'
 
     - service: mqtt.publish
       data_template:
@@ -28,10 +28,10 @@
       entity_id: group.presence
       to: 'not_home'
   action:
-    #- service: input_select.select_option
-      #data_template:
-        #entity_id: input_select.set_biprofile
-        #option: 'away'
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.set_biprofile
+        option: 'away'
 
     - service: homeassistant.turn_on
       data:

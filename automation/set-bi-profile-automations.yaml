@@ -15,19 +15,19 @@
 
 #### Set BI profile to home/away based on presence
 
-- alias: Set Blue Iris profile based on presence
-  trigger:
-    - platform: state
-      entity_id: group.presence
-      to: 'home'
-    - platform: state
-      entity_id: group.presence
-      to: 'not_home'
-  action:
-    - service: input_select.select_option
-      data_template:
-        entity_id: input_select.set_biprofile
-        option: "{{ 'away' if trigger.to_state.state == 'not_home' else 'home' }}"
+#- alias: Set Blue Iris profile based on presence
+  #trigger:
+    #- platform: state
+      #entity_id: group.presence
+      #to: 'home'
+    #- platform: state
+      #entity_id: group.presence
+      #to: 'not_home'
+  #action:
+    #- service: input_select.select_option
+      #data_template:
+        #entity_id: input_select.set_biprofile
+        #option: "{{ 'away' if trigger.to_state.state == 'not_home' else 'home' }}"
 
 #### Set BI profile to "alert" if a door or garage door opens while we are not home
 
