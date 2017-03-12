@@ -5,7 +5,7 @@
     to: 'on'
   condition:
     - condition: time
-      after: '15:00'
+      after: '23:00'
     - condition: state
       entity_id: light.kitchen_lights
       state: 'off'

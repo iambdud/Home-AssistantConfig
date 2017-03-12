@@ -19,7 +19,7 @@
     - service: mqtt.publish
       data_template:
         topic: "smartthings/Cabinet Lights/level"
-        payload: '25'
+        payload: '40'
     - service: light.turn_on
       data:
         entity_id: light.cabinet_light
@@ -42,7 +42,7 @@
     - service: mqtt.publish
       data_template:
         topic: "smartthings/Cabinet Lights/level"
-        payload: '{{ 75 if now().strftime("%H")|int < 23 else 40 }}'
+        payload: '{{ 99 if now().strftime("%H")|int < 23 else 40 }}'
     - service: light.turn_on
       data:
         entity_id: light.cabinet_light

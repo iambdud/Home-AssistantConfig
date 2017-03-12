@@ -6,4 +6,4 @@ cabinet_lights_timeout:
   - service: mqtt.publish
     data_template:
       topic: "smartthings/Cabinet Lights/level"
-      payload: '{{ 75 if now().strftime("%H")|int < 23 else 40 }}'
+      payload: '40'

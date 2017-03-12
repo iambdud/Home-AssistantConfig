@@ -9,7 +9,7 @@ cabinet_lights_set_timeout:
   - service: mqtt.publish
     data_template:
       topic: "smartthings/Cabinet Lights/level"
-      payload: '{{ 99 if now().strftime("%H")|int < 23 else 75 }}'
+      payload: '99'
   - service: light.turn_on
     data:
       entity_id: light.cabinet_lights
