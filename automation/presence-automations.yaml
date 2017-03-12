@@ -1,0 +1,39 @@
+#####################################################################################
+###  automation to do stuff when we get home or leave
+###
+#####################################################################################
+
+- alias: Do stuff when we get home
+  trigger:
+    - platform: state
+      entity_id: group.presence
+      to: 'home'
+  action:
+    #- service: input_select.select_option
+      #data_template:
+        #entity_id: input_select.set_biprofile
+        #option: 'home'
+
+    - service: mqtt.publish
+      data_template:
+        topic: "smartthings/Cabinet Lights/level"
+        payload: '{{ 99 if now().strftime("%H")|int < 23 else 40 }}'
+    - service: light.turn_on
+      data:
+        entity_id: light.cabinet_light
+
+- alias: Do stuff when we leave
+  trigger:
+    - platform: state
+      entity_id: group.presence
+      to: 'not_home'
+  action:
+    #- service: input_select.select_option
+      #data_template:
+        #entity_id: input_select.set_biprofile
+        #option: 'away'
+
+    - service: homeassistant.turn_on
+      data:
+        entity_id:
+          - script.goodbye
