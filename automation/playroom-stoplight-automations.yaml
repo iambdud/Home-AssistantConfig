@@ -1,0 +1,172 @@
+########################################
+### all automations related to the playroom stoplight
+########################################
+
+#### get the current stoplight value from mqtt
+
+- alias: "Get current stoplight value"
+  trigger:
+    platform: mqtt
+    topic: home/playroom stoplight/color
+  action:
+    service: input_select.select_option
+    data_template:
+      entity_id: input_select.playroom_stoplight
+      option: '{{ trigger.payload}}'
+#### set the stoplight color by sending a message to mqtt
+
+- alias: "Set stoplight color to MQTT"
+  trigger:
+    platform: state
+    entity_id: input_select.playroom_stoplight
+  action:
+    service: mqtt.publish
+    data_template:
+      topic: "home/playroom stoplight/color"
+      retain: true
+      payload: '{{states("input_select.playroom_stoplight")}}'
+
+#### turn off the stoplight at 9pm and 8:30am
+
+- alias: stoplight off at 9pm or 8am
+  trigger:
+    - platform: time
+      after: '21:00'
+    - platform: time
+      after: '08:30'
+    #testing:
+    #after: '17:11'
+  condition:
+    condition: state
+    entity_id: input_boolean.allow_stoplight_automation
+    state: 'on'
+  action:
+    service: input_select.select_option
+    data_template:
+      entity_id: input_select.playroom_stoplight
+      option: 'Off'
+
+#### set the stoplight to blue at 4am (it's too early! can't get up until 6)
+
+- alias: stoplight to blue at 4am
+  trigger:
+    platform: time
+    after: '04:00'
+    #test:
+    #after: '17:12'
+  condition:
+    condition: state
+    entity_id: input_boolean.allow_stoplight_automation
+    state: 'on'
+  action:
+    service: input_select.select_option
+    data_template:
+      entity_id: input_select.playroom_stoplight
+      option: 'Blue'
+
+#### turn the stoplight on at 6pm
+
+- alias: stoplight on at 6pm
+  trigger:
+    platform: time
+    after: '18:00'
+  condition:
+    condition: state
+    entity_id: input_boolean.allow_stoplight_automation
+    state: 'on'
+  action:
+    service: input_select.select_option
+    data_template:
+      entity_id: input_select.playroom_stoplight
+      #set to green if the next day is a weekend or a holiday
+      option: >
+        {% set day = now().strftime('%a') %}
+        {% set daymonth = now().strftime("%m%d")|int + 1 %}
+        {%- if day == 'Fri' or day == 'Sat' -%}
+          Green
+        {%- elif daymonth == 102
+        or daymonth == 414
+        or daymonth == 529
+        or daymonth == 612
+        or daymonth == 704
+        or daymonth == 904
+        or daymonth == 1122
+        or daymonth == 1123
+        or daymonth == 1124
+        or daymonth == 1225
+        or daymonth == 1226
+        or daymonth == 1227
+        or daymonth == 1228
+        or daymonth == 1229
+        -%}
+          Green
+        {%- else -%}
+          Red
+        {%- endif -%}
+
+#### turn the stoplight on at 6am
+
+- alias: stoplight on at 6am
+  trigger:
+    platform: time
+    after: '06:00'
+  condition:
+    condition: state
+    entity_id: input_boolean.allow_stoplight_automation
+    state: 'on'
+  action:
+    service: input_select.select_option
+    data_template:
+      entity_id: input_select.playroom_stoplight
+      #set to green if it is a weekend or a holiday
+      option: >
+        {% set day = now().strftime('%a') %}
+        {% set daymonth = now().strftime("%m%d")|int %}
+        {%- if day == 'Sat' or day == 'Sun' -%}
+          Green
+        {%- elif daymonth == 102
+        or daymonth == 414
+        or daymonth == 529
+        or daymonth == 612
+        or daymonth == 704
+        or daymonth == 904
+        or daymonth == 1122
+        or daymonth == 1123
+        or daymonth == 1124
+        or daymonth == 1225
+        or daymonth == 1226
+        or daymonth == 1227
+        or daymonth == 1228
+        or daymonth == 1229
+        -%}
+          Green
+        {%- else -%}
+          Red
+        {%- endif -%}
+
+  # http://www.calendar-365.com/holidays/2017.html
+  # 101 New_years_day (colorloop)
+  # RWB 212 Lincoln's Birthday
+  # 214 Valentine's Day (pink, red)
+  # RWB 220 President's Day
+  # 228 Mardi Gras (purple, green, gold )
+  # 317 st Patty (green)
+  # 414 Good Friday
+  # 416 Easter
+  # 422 Earth Day
+  # 505 Cinco de Mayo
+  # 514 Mother's Day
+  # RWB 520 Armed Forces Day
+  # RWB 529 Memorial Day
+  # RWB 614 Flag Day
+  # 618 Fathers day
+  # RWB 704 July 4th
+  # RWB 904 Labor Day
+  # RWB 911 Patriots day
+  # 1009 columbus day
+  # 1031 halloween
+  # RWB 1111 veterans day
+  # 1123 Thanksgiving
+  # 1212 Hanukkah start 8 days.
+  # 1225 Chrismas
+  # 1231 New years eve

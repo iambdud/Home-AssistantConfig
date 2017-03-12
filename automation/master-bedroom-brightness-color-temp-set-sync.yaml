@@ -1,0 +1,60 @@
+######################################################################################################
+### Automations for the sliders for brightness and color temp for the master bedroom lights
+###
+######################################################################################################
+
+#### Set the master bedroom brightness based on the slider value
+
+- alias: Master Bedroom Set Brightness
+  trigger:
+    platform: state
+    entity_id: input_slider.brightness_mbr
+  action:
+    service: light.turn_on
+    data:
+      entity_id:
+        - light.master_bedroom_lights
+    data_template:
+      brightness: '{{ states( "input_slider.brightness_mbr" )|round( 0 ) }}'
+
+#### Set the slider value with the actual value of the brightness of the master bedroom lights
+
+- alias: Brightness Master Bedroom Sync Slider
+  trigger:
+    - platform: state
+      entity_id: light.master_bedroom_lights
+      to: "on"
+  action:
+    service: input_slider.select_value
+    data:
+      entity_id: input_slider.brightness_mbr
+    data_template:
+      value: '{{ trigger.to_state.attributes.brightness|float }}'
+
+#### Set the master bedroom color temp based on the slider value
+
+- alias: Master Bedroom Color Temp
+  trigger:
+    platform: state
+    entity_id: input_slider.color_temp_mbr
+  action:
+    service: light.turn_on
+    data:
+      entity_id:
+        - light.master_bedroom_lights
+    data_template:
+      color_temp: '{{ states( "input_slider.color_temp_mbr" )|round( 0 ) }}'
+
+#### Set the slider value with the actual value of the color temp of the master bedroom lights
+
+- alias: Color Temp Master Bedroom Sync
+  trigger:
+    - platform: state
+      entity_id: light.master_bedroom_lights
+      to: "on"
+  action:
+    service: input_slider.select_value
+    data:
+      entity_id: input_slider.color_temp_mbr
+    data_template:
+      value: '{{ trigger.to_state.attributes.color_temp|float }}'

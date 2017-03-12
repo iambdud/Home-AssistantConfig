@@ -2,8 +2,6 @@
   trigger:
     platform: time
     after: '18:00'
-    #testing
-    #after: '14:14'
   condition:
     condition: state
     entity_id: input_boolean.allow_stoplight_automation
@@ -12,8 +10,6 @@
     service: input_select.select_option
     data_template:
       entity_id: input_select.playroom_stoplight
-      #option: 'Red'
-      #option: "{{ 'Green' if now().strftime('%a') == 'Fri' or now().strftime('%a') == 'Sat' else 'Red' }}"
       #set to green if the next day is a weekend or a holiday
       option: >
         {% set day = now().strftime('%a') %}

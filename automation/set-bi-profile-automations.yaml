@@ -1,0 +1,69 @@
+######################################################################################################
+### Automations related to setting the Blue Iris profile for various states
+###
+######################################################################################################
+
+#### Core automation to execute shell script to set BI profile based on what's selected on the input_select
+#### all other "set bi profile" automations only change the input_select to the desired BI profile
+
+- alias: Set Blue Iris profile
+  trigger:
+    platform: state
+    entity_id: input_select.set_biprofile
+  action:
+    service: shell_command.set_bi_profile
+
+#### Set BI profile to home/away based on presence
+
+- alias: Set Blue Iris to Home when both phones are at home
+  trigger:
+    - platform: state
+      entity_id: group.presence
+      to: 'home'
+    - platform: state
+      entity_id: group.presence
+      to: 'not_home'
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.set_biprofile
+        option: "{{ 'away' if trigger.to_state.state == 'not_home' else 'home' }}"
+
+#### Set BI profile to "alert" if a door or garage door opens while we are not home
+
+- alias: 'Set BI to alert if doors or garage open while we are not home'
+  trigger:
+    - platform: state
+      entity_id: group.doors_windows
+      state: open
+    - platform: state
+      entity_id: group.garage_doors
+      state: open
+  condition:
+    condition: state
+    entity_id: group.presence
+    state: 'not_home'
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.set_biprofile
+        option: 'alert'
+
+#### Set BI profile to 'home' in the morning and 'night' at night
+
+- alias: Set Blue Iris to morning/night
+  trigger:
+    - platform: time
+      after: '06:00'
+      #after: '14:59'
+    - platform: time
+      after: '23:00'
+  condition:
+    condition: state
+    entity_id: group.presence
+    state: 'home'
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.set_biprofile
+        option: "{{ 'home' if trigger.now.time().hour == 6 else 'night' }}"
