@@ -1,25 +1,24 @@
+#####################################################################################
+###  script to do things in the afternoon
+###
+#####################################################################################
+
 afternoon:
   alias: "afternoon"
   sequence:
   - service: script.sonos_say
   #- service: script.voice_notify
-    #data:
     data_template:
       where: living_room
       volume: 0.4
       what: 'good afternoon'
+
   - service: mqtt.publish
     data_template:
       topic: "smartthings/Living Room Lights/level"
       payload: '100'
-  - service: mqtt.publish
-    data_template:
-      topic: "smartthings/Cabinet Lights/level"
-      payload: '100'
-  - service: light.turn_on
-    data:
-      entity_id: light.kitchen_lights, light.cabinet_lights, light.living_room_lights
 
-  #- service: scene.turn_on
-    #data:
-      #entity_id: scene.master_bedroom_relax
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - light.living_room_lights

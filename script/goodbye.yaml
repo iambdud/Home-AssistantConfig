@@ -1,19 +1,31 @@
+#####################################################################################
+###  script to turn most things off when we leave
+###
+#####################################################################################
+
 goodbye:
   alias: "goodbye"
   sequence:
   - service: script.sonos_say
   #- service: script.voice_notify
-    #data:
     data_template:
       where: living_room
       volume: 0.4
       what: 'goodbye'
-  - service: light.turn_off
+
+  - service: lock.lock
     data:
-      entity_id: group.all_lights
-  - service: switch.turn_off
+      entity_id:
+        - lock.front_door_lock
+        - lock.back_door_lock
+
+  - service: homeassistant.turn_off
     data:
-      entity_id: group.all_switches
-  - service: media_player.turn_off
-    data:
-      entity_id: media_player.living_room_tv
+      entity_id:
+        - group.living_room
+        - light.breakfast_area_lights
+        - light.kitchen_lights
+        - light.upstairs_hall_lamp
+        - light.master_bedroom_lights
+        - group.all_switches
+        - media_player.living_room_tv

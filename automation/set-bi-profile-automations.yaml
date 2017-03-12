@@ -15,7 +15,7 @@
 
 #### Set BI profile to home/away based on presence
 
-- alias: Set Blue Iris to Home when both phones are at home
+- alias: Set Blue Iris profile based on presence
   trigger:
     - platform: state
       entity_id: group.presence
