@@ -1,0 +1,29 @@
+#####################################################################################
+###  Brighten cabinet lights in the morning and dim them at night
+###
+#####################################################################################
+- alias: 'Dim cabinet lights at 11pm'
+  trigger:
+    platform: time
+    after: '23:00'
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "smartthings/Cabinet Lights/level"
+        payload: '40'
+    - service: light.turn_on
+      data:
+        entity_id: light.cabinet_lights
+
+- alias: 'Brighten cabinet lights at 5am'
+  trigger:
+    platform: time
+    after: '05:00'
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "smartthings/Cabinet Lights/level"
+        payload: '99'
+    - service: light.turn_on
+      data:
+        entity_id: light.cabinet_lights
