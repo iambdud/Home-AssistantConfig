@@ -12,16 +12,16 @@ brightness_lr_lights:
   max: 99
   step: 1
 
-brightness_mbr:
-  name: 'Brightness'
-  initial: 1
-  min: 1
-  max: 255
-  step: 1
+#brightness_mbr:
+  #name: 'Brightness'
+  #initial: 1
+  #min: 1
+  #max: 255
+  #step: 1
 
-color_temp_mbr:
-  name: 'Color Temp'
-  initial: 154
-  min: 154
-  max: 500
-  step: 1
+#color_temp_mbr:
+  #name: 'Color Temp'
+  #initial: 154
+  #min: 154
+  #max: 500
+  #step: 1

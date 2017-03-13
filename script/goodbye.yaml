@@ -16,8 +16,8 @@ goodbye:
   - service: lock.lock
     data:
       entity_id:
-        - lock.front_door
         - lock.back_door
+        - lock.front_door
 
   - service: homeassistant.turn_off
     data:

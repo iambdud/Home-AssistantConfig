@@ -237,10 +237,11 @@ downstairs:
 master_bedroom:
   name: "Master Bedroom"
   entities:
+    - light.master_bedroom_lights
     - light.bens_lamp
     - light.andreas_lamp
-    - input_slider.brightness_mbr
-    - input_slider.color_temp_mbr
+    #- input_slider.brightness_mbr
+    #- input_slider.color_temp_mbr
     - input_select.scene_master_bedroom
 outside_lights:
   name: "Outside Lights"

@@ -16,8 +16,8 @@ bedtime:
   - service: lock.lock
     data:
       entity_id:
-        - lock.front_door_lock
-        - lock.back_door_lock
+        - lock.back_door
+        - lock.front_door
 
   - service: homeassistant.turn_off
     data:
