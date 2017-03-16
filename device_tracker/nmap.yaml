@@ -2,3 +2,7 @@ platform: nmap_tracker
 hosts: 10.10.10.1/24
 exclude:
   - 10.10.10.101
+home_interval: 3
+# Seconds to wait till marking someone as not home after not being seen
+# (default: 180)
+consider_home: 180
