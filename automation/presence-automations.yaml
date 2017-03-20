@@ -33,7 +33,7 @@
         entity_id: input_select.set_biprofile
         option: 'away'
 
-    #- service: homeassistant.turn_on
-      #data:
-        #entity_id:
-          #- script.goodbye
+    - service: homeassistant.turn_on
+      data:
+        entity_id:
+          - script.goodbye
