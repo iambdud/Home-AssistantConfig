@@ -124,5 +124,5 @@ ifttt:
   key: !secret ifttt_key
 
 recorder:
-  purge_days: 60
-  db_url: !secret db_url
+  purge_days: 7
+  #db_url: !secret db_url
