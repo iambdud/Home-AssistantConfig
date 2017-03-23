@@ -1,0 +1,10 @@
+platform: mqtt
+name: "Bonus Room Lights"
+state_topic: "smartthings/Bonus Room Lights/switch"
+command_topic: "smartthings/Bonus Room Lights/switch"
+brightness_state_topic: "smartthings/Bonus Room Lights/level"
+brightness_command_topic: "smartthings/Bonus Room Lights/level"
+brightness_scale: 99
+payload_on: "on"
+payload_off: "off"
+retain: true

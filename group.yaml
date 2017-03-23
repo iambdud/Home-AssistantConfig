@@ -189,6 +189,7 @@ upstairs:
   entities:
     #- switch.upstairs_hall_outlet
     - light.upstairs_hall_lamp
+    - light.bonus_room_lights
     - climate.upstairs_tstat
     - input_select.playroom_stoplight
 living_room:
