@@ -26,6 +26,7 @@ goodbye:
         - light.breakfast_area_lights
         - light.kitchen_lights
         - light.upstairs_hall_lamp
+        - light.bonus_room_lights
         - light.master_bedroom_lights
         - group.all_switches
         - media_player.living_room_tv

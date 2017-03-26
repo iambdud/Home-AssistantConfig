@@ -16,7 +16,7 @@ tv_time:
   - service: mqtt.publish
     data_template:
       topic: "smartthings/Living Room Lights/level"
-      payload: '60'
+      payload: '50'
 
   - service: homeassistant.turn_on
     data:
