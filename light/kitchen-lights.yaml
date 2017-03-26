@@ -2,6 +2,9 @@ platform: mqtt
 name: "Kitchen Lights"
 state_topic: "smartthings/Kitchen Lights/switch"
 command_topic: "smartthings/Kitchen Lights/switch"
+brightness_state_topic: "smartthings/Kitchen Lights/level"
+brightness_command_topic: "smartthings/Kitchen Lights/level"
+brightness_scale: 99
 qos: 0
 payload_on: "on"
 payload_off: "off"
