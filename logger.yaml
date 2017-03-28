@@ -6,7 +6,7 @@
 
 # Log Severities: notset, debug, info, warn, warning, error, fatal, critical
 
-default: info
+default: debug
 logs:
   homeassistant.core: warn
   homeassistant.components.automation: info
