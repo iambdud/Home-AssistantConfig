@@ -36,9 +36,9 @@
     - platform: state
       entity_id: group.doors_windows
       state: open
-    - platform: state
-      entity_id: group.garage_doors
-      state: open
+    #- platform: state
+      #entity_id: group.garage_doors
+      #state: open
   condition:
     condition: state
     entity_id: group.presence
