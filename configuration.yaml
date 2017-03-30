@@ -126,3 +126,6 @@ ifttt:
 recorder:
   purge_days: 7
   #db_url: !secret db_url
+
+influxdb:
+  host: linuxserver1
