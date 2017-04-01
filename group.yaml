@@ -9,15 +9,17 @@ default_view:
     #- group.weather
     - group.locks
     - group.upstairs
-    #- group.downstairs
+    - group.downstairs
     - group.living_room
     #- group.LR_separates
     - group.kitchen
-    - group.breakfast_area
+    #- group.breakfast_area
     - group.master_bedroom
     #- light.master_bedroom_lights
     - group.outside_lights
     - group.garage_doors
+    - group.LR_separates
+    #- light.mudroom_lights
 
 
     #- input_boolean.prevent_stoplight_alexa
@@ -26,8 +28,8 @@ more_things:
   name: "More Things"
   view: yes
   entities:
-    - group.downstairs
-    - group.LR_separates
+    #- group.downstairs
+    #- group.LR_separates
     - group.input_booleans
     - group.scripts
 
@@ -228,11 +230,12 @@ downstairs:
   name: Downstairs
   entities:
     - light.living_room_lights
-    - light.living_room_lights_extended
+    #- light.living_room_lights_extended
     - light.living_room_lamp
     - light.kitchen_lights
     - light.breakfast_area_lights
     - light.cabinet_lights
+    - light.mudroom_lights
     #- light.breakfast_1
     #- light.breakfast_2
     #- light.breakfast_3

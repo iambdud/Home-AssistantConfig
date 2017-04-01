@@ -41,3 +41,11 @@ light.master_bedroom_lights:
 light.upstairs_hall_lamp:
   friendly_name: 'Upstairs Hall Lamp'
   emulated_hue: true
+
+light.upstairs_hall_lights:
+  friendly_name: 'Upstairs Hall Lights'
+  emulated_hue: true
+
+light.mudroom_lights:
+  friendly_name: 'Mudroom Lights'
+  emulated_hue: true

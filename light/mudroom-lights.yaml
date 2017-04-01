@@ -1,0 +1,9 @@
+platform: mqtt
+name: "Mudroom Lights"
+state_topic: "smartthings/Mudroom Lights/switch"
+command_topic: "smartthings/Mudroom Lights/switch"
+qos: 0
+payload_on: "on"
+payload_off: "off"
+optimistic: false
+retain: true
