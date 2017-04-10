@@ -8,7 +8,7 @@ group.all_switches:
 
 group.downstairs:
   friendly_name: 'Downstairs'
-  #emulated_hue: true
+  emulated_hue: true
 
 group.living_room:
   friendly_name: 'Living Room'

@@ -49,3 +49,7 @@ light.upstairs_hall_lights:
 light.mudroom_lights:
   friendly_name: 'Mudroom Lights'
   emulated_hue: true
+
+light.bonus_room_lights:
+  friendly_name: 'Bonus Room Lights'
+  emulated_hue: true
