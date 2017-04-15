@@ -1,0 +1,6 @@
+platform: mqtt
+state_topic: "MotionSensors/mudroom"
+name: "Motion Sensor Mudroom"
+payload_on: "motion"
+payload_off: "no_motion"
+device_class: motion

@@ -1,0 +1,31 @@
+#####################################################################################
+###  Resets motion sensors to "no_motion" since the RF sensors only report motion
+###
+#####################################################################################
+- alias: 'Off Timer - Motion Sensor Playroom'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.motion_sensor_playroom
+    state: 'on'
+    for:
+      seconds: 9
+  action:
+    service: mqtt.publish
+    data:
+      topic: "MotionSensors/playroom"
+      payload: 'no_motion'
+      retain: 'true'
+
+- alias: 'Off Timer - Motion Sensor Mudroom'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.motion_sensor_mudroom
+    state: 'on'
+    for:
+      seconds: 9
+  action:
+    service: mqtt.publish
+    data:
+      topic: "MotionSensors/mudroom"
+      payload: 'no_motion'
+      retain: 'true'
