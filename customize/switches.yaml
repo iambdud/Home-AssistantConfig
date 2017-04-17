@@ -1,3 +1,3 @@
-switch.outlet:
-  friendly_name: "Outlet"
+switch.patio_lights:
+  friendly_name: "Patio Lights"
   emulated_hue: true

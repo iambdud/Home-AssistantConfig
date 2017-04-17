@@ -1,7 +1,7 @@
 platform: mqtt
-name: "Outlet"
-state_topic: "smartthings/Outlet/switch"
-command_topic: "smartthings/Outlet/switch"
+name: "Patio Lights"
+state_topic: "smartthings/Patio Lights/switch"
+command_topic: "smartthings/Patio Lights/switch"
 qos: 0
 payload_on: "on"
 payload_off: "off"

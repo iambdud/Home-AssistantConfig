@@ -255,6 +255,7 @@ outside_lights:
   entities:
     - light.front_porch_lights
     - light.driveway_lights
+    - switch.patio_lights
 scripts:
   name: "Scripts"
   entities:
