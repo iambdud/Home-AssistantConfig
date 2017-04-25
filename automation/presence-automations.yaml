@@ -37,3 +37,24 @@
       #data:
         #entity_id:
           #- script.goodbye
+
+- alias: Turn off stuff when we're gone for 10 minutes
+  trigger:
+    - platform: state
+      entity_id: group.presence
+      state: 'not_home'
+      for: 00:10:00
+  action:
+    - service: homeassistant.turn_off
+      data:
+        entity_id:
+          - group.living_room
+          - light.breakfast_area_lights
+          - light.kitchen_lights
+          - light.upstairs_hall_lamp
+          - light.upstairs_hall_lights
+          - light.bonus_room_lights
+          - light.master_bedroom_lights
+          - group.all_switches
+          - media_player.living_room_tv
+          - light.mudroom_lights
