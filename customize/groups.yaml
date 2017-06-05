@@ -21,3 +21,9 @@ group.kitchen:
 group.outside_lights:
   friendly_name: 'Outside Lights'
   emulated_hue: true
+
+group.all_automations:
+  hidden: false
+
+group.all_devices:
+  hidden: false

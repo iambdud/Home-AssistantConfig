@@ -1,9 +1,9 @@
 - alias: Disable cameras at 7:30pm and 10:30pm if we are home (just in case)
   trigger:
     - platform: time
-      after: '19:30'
+      at: '19:30'
     - platform: time
-      after: '22:00'
+      at: '22:00'
   condition:
     condition: state
     entity_id: group.presence

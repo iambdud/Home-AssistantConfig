@@ -76,6 +76,9 @@ automation: !include_dir_merge_list automation
 
 climate: !include_dir_list climate
 
+ecobee:
+    api_key: wb0Esf0q2mEUBXgdeogjDLyHAeuok0pY
+
 notify: !include notification.yaml
 
 media_player: !include_dir_list media_player

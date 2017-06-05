@@ -42,7 +42,7 @@
   trigger:
     - platform: state
       entity_id: group.presence
-      state: 'not_home'
+      to: 'not_home'
       for: 00:10:00
   action:
     - service: homeassistant.turn_off

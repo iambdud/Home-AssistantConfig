@@ -1,6 +1,7 @@
 platform: mqtt
-state_topic: "MotionSensors/playroom"
-name: "Motion Sensor Playroom"
-payload_on: "motion"
-payload_off: "no_motion"
+state_topic: "smartthings/Motion Sensor Bonus Room/motion"
+name: "Motion Sensor Bonus Room"
+payload_on: "active"
+payload_off: "inactive"
 device_class: motion
+retain: true

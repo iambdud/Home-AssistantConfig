@@ -1,0 +1,7 @@
+bonus_room_lights_timeout:
+  alias: "Turn off bonus room lights after 5 minutes of inactivity"
+  sequence:
+  - delay:
+      minutes: 5
+  - service: light.turn_off
+    entity_id: light.bonus_room_lights

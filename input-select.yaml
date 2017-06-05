@@ -26,3 +26,12 @@ playroom_stoplight:
     - "Red"
     - "Green"
     - "Blue"
+
+home_modes:
+  name: Home Mode Scripts
+  initial: "-"
+  options:
+    - "-"
+    - "Morning"
+    - "Goodbye"
+    - "Bedtime"

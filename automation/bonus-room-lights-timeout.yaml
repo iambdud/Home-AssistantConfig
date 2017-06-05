@@ -1,0 +1,8 @@
+- alias: Turn off bonus room lights after no motion
+  trigger:
+    platform: state
+    entity_id: binary_sensor.motion_sensor_bonus_room
+    to: 'on'
+  action:
+    service: homeassistant.turn_on
+    entity_id: script.bonus_room_lights_set_timeout

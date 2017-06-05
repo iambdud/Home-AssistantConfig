@@ -19,7 +19,7 @@
 - alias: 'Turn off outside lights at 10pm'
   trigger:
     platform: time
-    after: '22:00'
+    at: '22:30'
   condition:
     condition: state
     entity_id: group.outside_lights

@@ -1,0 +1,6 @@
+platform: mqtt
+state_topic: "MotionSensors/playroom"
+name: "Motion Sensor Playroom"
+payload_on: "motion"
+payload_off: "no_motion"
+device_class: motion
