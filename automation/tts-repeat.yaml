@@ -5,7 +5,7 @@
   trigger:
     platform: state
     entity_id: input_boolean.last_message
-    state: 'on'
+    to: 'on'
     from: 'off'
   action:
     service: script.voice_notify

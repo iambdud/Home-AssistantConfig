@@ -35,7 +35,7 @@
   trigger:
     - platform: state
       entity_id: group.doors_windows
-      state: open
+      to: open
     #- platform: state
       #entity_id: group.garage_doors
       #state: open

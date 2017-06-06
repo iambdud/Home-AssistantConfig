@@ -6,7 +6,7 @@
       seconds: '00'
     - platform: state
       entity_id: group.presence
-      state: not_home
+      to: not_home
       for: 00:02:00
   condition:
     condition: or
