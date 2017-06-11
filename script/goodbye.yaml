@@ -25,6 +25,8 @@ goodbye:
         - group.living_room
         - light.breakfast_area_lights
         - light.kitchen_lights
+        - light.dining_room_lights
+        #- light.mudroom_lights
         - light.upstairs_hall_lamp
         - light.upstairs_hall_lights
         - light.bonus_room_lights

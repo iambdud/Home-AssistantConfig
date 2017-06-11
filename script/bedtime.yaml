@@ -25,6 +25,8 @@ bedtime:
         - group.living_room
         - light.kitchen_lights
         - light.breakfast_area_lights
+        - light.dining_room_lights
+        - light.mudroom_lights
         - group.all_switches
         - media_player.living_room_tv
 

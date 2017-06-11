@@ -109,6 +109,13 @@ presence:
   entities:
     - device_tracker.bensoneplusone
     - device_tracker.andreasiphone
+    - device_tracker.jeanettesiphone
+    - device_tracker.jeanettesipad
+    - device_tracker.stevesphone
+    - device_tracker.lindasipad
+    - device_tracker.wilacer
+    - device_tracker.kobeysiphone
+    - device_tracker.randysipad
     #- device_tracker.michaelvolleyball
     #- device_tracker.garrettthedudslocal
     #- device_tracker.androidaae194751bf1f9b1thedudslocal
