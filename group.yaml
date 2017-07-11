@@ -24,17 +24,6 @@ default_view:
 
     #- input_boolean.prevent_stoplight_alexa
     #- input_boolean.allow_stoplight_automation
-more_things:
-  name: "More Things"
-  view: yes
-  entities:
-    #- group.downstairs
-    #- group.LR_separates
-    - group.input_booleans
-    - group.scripts
-    - group.all_automations
-    - group.all_devices
-
 sensor_view:
   name: Sensors
   view: yes
@@ -53,6 +42,16 @@ sensor_view:
     #- sensor.speedtest_download
     #- sensor.speedtest_upload
     #- sensor.fastcom_download
+more_things:
+  name: "More Things"
+  view: yes
+  entities:
+    #- group.downstairs
+    #- group.LR_separates
+    - group.input_booleans
+    - group.scripts
+    - group.all_automations
+    - group.all_devices
 #automations_view:
   #name: Automations
   #view: yes
@@ -60,15 +59,29 @@ sensor_view:
     #- group.all_automations
 
 media_player_view:
-  name: Media Players
+  name: Rokus and TVs
   view: yes
   entities:
-    - group.plex
+    - media_player.living_room_tv
+    - media_player.roku_4
+    - media_player.roku_5s467u102719
+    - media_player.roku_5s56au613037
+    #- media_player.roku_master_bedroom
+    #- media_player.roku_living_room
+    #- media_player.roku_bonus_room
+    
+speakers_view:
+  name: Sonos and CCAs
+  view: yes
+  entities:
+    #- group.plex
     - group.sonos_players
     - media_player.kitchen_speakers
-    - media_player.living_room_tv
-    - media_player.master_bedroom_tv
+    - media_player.outside_speakers
+    #- media_player.master_bedroom_tv
     - media_player.family_room_home
+
+    
 scenes_scripts_automations:
   name: "Scenes Scripts Automations"
   view: no
@@ -110,12 +123,12 @@ presence:
     - device_tracker.bensoneplusone
     - device_tracker.andreasiphone
     - device_tracker.jeanettesiphone
-    - device_tracker.jeanettesipad
+    #- device_tracker.jeanettesipad
     - device_tracker.stevesphone
-    - device_tracker.lindasipad
-    - device_tracker.wilacer
+    #- device_tracker.lindasipad
+    #- device_tracker.wilacer
     - device_tracker.kobeysiphone
-    - device_tracker.randysipad
+    #- device_tracker.randysipad
     #- device_tracker.michaelvolleyball
     #- device_tracker.garrettthedudslocal
     #- device_tracker.androidaae194751bf1f9b1thedudslocal

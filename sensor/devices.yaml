@@ -40,3 +40,11 @@ sensors:
             {% else %}
                 Offline
             {%- endif %}
+  garagecam:
+    friendly_name: 'GarageCam'
+    value_template: >-
+            {%- if is_state("device_tracker.garagecam", "home") %}
+                Online
+            {% else %}
+                Offline
+            {%- endif %}

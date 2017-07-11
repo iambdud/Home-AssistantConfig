@@ -10,6 +10,7 @@
       #- sensor.ryancam
       #- sensor.livingroomcam
       #- sensor.bonusroomcam
+      - sensor.garagecam
     to: 'Offline'
     for: 00:05:00
   action:
