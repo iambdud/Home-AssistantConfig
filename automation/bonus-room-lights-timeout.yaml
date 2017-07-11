@@ -1,4 +1,4 @@
-- alias: Turn off bonus room lights after no motion
+- alias: Bonus Room - Turn off lights after no motion
   trigger:
     platform: state
     entity_id: binary_sensor.motion_sensor_bonus_room

@@ -1,4 +1,5 @@
-- alias: 'Is the Garage door Open at night - Checks every 20 minutes or 2 minutes after we drive away.'
+#####Is the Garage door Open at night - Checks every 20 minutes or 2 minutes after we drive away.
+- alias: 'Garage - A door is left open at night or 2 minutes after leaving'
   trigger:
     - platform: time
       minutes: '/20'

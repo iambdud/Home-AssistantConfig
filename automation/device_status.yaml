@@ -1,7 +1,7 @@
 ########################################
 ### Notify me via slack if a device goes offline for 5 minutes
 ########################################
-- alias: Notify if a device goes offline for 5 minutes
+- alias: Device Status - Notify if a device goes offline for 5 minutes
   trigger:
     platform: state
     entity_id:

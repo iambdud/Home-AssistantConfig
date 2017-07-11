@@ -6,14 +6,14 @@
 #### Core automation to execute shell script to set BI profile based on what's selected on the input_select
 #### all other "set bi profile" automations only change the input_select to the desired BI profile
 
-- alias: Set Blue Iris profile
+- alias: BlueIris - Set BI profile when input select changes
   trigger:
     platform: state
     entity_id: input_select.set_biprofile
   action:
     service: shell_command.set_bi_profile
 
-#### Set BI profile to home/away based on presence
+#### Set BI profile to home/away based on presence ##### moved to presence automations...
 
 #- alias: Set Blue Iris profile based on presence
   #trigger:
@@ -31,7 +31,7 @@
 
 #### Set BI profile to "alert" if a door or garage door opens while we are not home
 
-- alias: 'Set BI to alert if doors or garage open while we are not home'
+- alias: 'BlueIris - Set BI profile to alert if doors open while we are not home'
   trigger:
     - platform: state
       entity_id: group.doors_windows
@@ -51,7 +51,7 @@
 
 #### Set BI profile to 'home' in the morning and 'night' at night
 
-- alias: Set Blue Iris to morning/night
+- alias: BlueIris - Set BI profile to morning/night
   trigger:
     - platform: time
       at: '06:00'

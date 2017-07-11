@@ -3,7 +3,7 @@
 ###
 #####################################################################################
 
-- alias: 'Turn on outside lights at sunset'
+- alias: 'Outside Lights - Turn on front lights at sunset'
   trigger:
     platform: sun
     event: sunset
@@ -16,7 +16,7 @@
     entity_id: group.outside_lights
 
 
-- alias: 'Turn off outside lights at 10pm'
+- alias: 'Outside Lights - Turn off at 10:30pm'
   trigger:
     platform: time
     at: '22:30'

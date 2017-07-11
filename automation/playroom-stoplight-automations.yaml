@@ -4,7 +4,7 @@
 
 #### get the current stoplight value from mqtt
 
-- alias: "Get current stoplight value"
+- alias: "Playroom Stoplight - Get current stoplight value"
   trigger:
     platform: mqtt
     topic: home/playroom stoplight/color
@@ -15,7 +15,7 @@
       option: '{{ trigger.payload}}'
 #### set the stoplight color by sending a message to mqtt
 
-- alias: "Set stoplight color to MQTT"
+- alias: "Playroom Stoplight - Set stoplight color to MQTT"
   trigger:
     platform: state
     entity_id: input_select.playroom_stoplight
@@ -28,7 +28,7 @@
 
 #### turn off the stoplight at 9pm and 8:30am
 
-- alias: stoplight off at 9pm or 8am
+- alias: Playroom Stoplight - stoplight off at 9pm or 8am
   trigger:
     - platform: time
       at: '21:00'
@@ -48,7 +48,7 @@
 
 #### set the stoplight to blue at 4am (it's too early! can't get up until 6)
 
-- alias: stoplight to blue at 4am
+- alias: Playroom Stoplight - stoplight to blue at 4am
   trigger:
     platform: time
     at: '04:00'
@@ -66,7 +66,7 @@
 
 #### turn the stoplight on at 6pm
 
-- alias: stoplight on at 6pm
+- alias: Playroom Stoplight - stoplight on at 6pm
   trigger:
     platform: time
     at: '18:00'
@@ -106,7 +106,7 @@
 
 #### turn the stoplight on at 6am
 
-- alias: stoplight on at 6am
+- alias: Playroom Stoplight - stoplight on at 6am
   trigger:
     platform: time
     at: '06:00'

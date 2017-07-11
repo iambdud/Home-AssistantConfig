@@ -1,4 +1,4 @@
-- alias: Disable cameras at 7:30pm and 10:30pm if we are home (just in case)
+- alias: BlueIris - Disable jack and ryan cameras at 7:30pm and 10:30pm if we are home
   trigger:
     - platform: time
       at: '19:30'

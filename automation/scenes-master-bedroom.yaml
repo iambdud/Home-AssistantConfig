@@ -1,4 +1,4 @@
-- alias: Scene Master Bedroom
+- alias: Mater Bedroom - Set scene for lights from input select
   trigger:
     platform: state
     entity_id: input_select.scene_master_bedroom

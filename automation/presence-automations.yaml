@@ -3,7 +3,7 @@
 ###
 #####################################################################################
 
-- alias: Do stuff when we get home
+- alias: Presence - Do stuff when we get home
   trigger:
     - platform: state
       entity_id: group.presence
@@ -22,7 +22,7 @@
       data:
         entity_id: light.cabinet_light
 
-- alias: Do stuff when we leave
+- alias: Presence - Do stuff when we leave
   trigger:
     - platform: state
       entity_id: group.presence
@@ -38,7 +38,7 @@
         #entity_id:
           #- script.goodbye
 
-- alias: Turn off stuff when we're gone for 10 minutes
+- alias: Presence - Turn off stuff when we're gone for 10 minutes
   trigger:
     - platform: state
       entity_id: group.presence

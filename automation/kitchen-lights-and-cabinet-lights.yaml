@@ -3,7 +3,7 @@
 ###
 #####################################################################################
 
-- alias: Kitchen lights on - Cabinet lights dim
+- alias: Kitchen - Dim cabinet lights when kitchen lights turn on
   trigger:
     - platform: state
       entity_id: light.kitchen_lights
@@ -27,7 +27,7 @@
 ##############################################################################
 ### If the kitchen lights go off turn on the cabinet lights (different brightness based on time of day)
 
-- alias: Kitchen lights off - turn on cabinet lights
+- alias: Kitchen - Brighten cabinet lights when when kitchen lights turn off
   trigger:
     - platform: state
       entity_id: light.kitchen_lights

@@ -2,7 +2,7 @@
 ###  Brighten cabinet lights in the morning and dim them at night
 ###
 #####################################################################################
-- alias: 'Dim cabinet lights at 11pm'
+- alias: 'Cabinet lights - Dim at 11pm'
   trigger:
     platform: time
     at: '23:00'
@@ -15,7 +15,7 @@
       data:
         entity_id: light.cabinet_lights
 
-- alias: 'Brighten cabinet lights at 5am'
+- alias: 'Cabinet lights - Brighten at 5am'
   trigger:
     platform: time
     at: '05:00'

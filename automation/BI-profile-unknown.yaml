@@ -1,4 +1,4 @@
-- alias: Notify if BI profile is 'unknown'
+- alias: BlueIris - Notify if BI profile is 'unknown'
   trigger:
     platform: state
     entity_id: sensor.blueiris_profile
