@@ -57,7 +57,7 @@ tts:
   - platform: amazon_polly
     aws_access_key_id: !secret aws_access_key_ID
     aws_secret_access_key: !secret aws_secret_access_key
-    region_name: 'us-east-1'
+    region_name: 'us-east-2'
 
 switch: !include switch.yaml
 
@@ -130,5 +130,5 @@ recorder:
   purge_days: 7
   #db_url: !secret db_url
 
-influxdb:
-  host: linuxserver1
+#influxdb:
+  #host: linuxserver1

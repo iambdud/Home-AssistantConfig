@@ -128,6 +128,8 @@ presence:
     #- device_tracker.lindasipad
     #- device_tracker.wilacer
     - device_tracker.kobeysiphone
+    - device_tracker.androidaee3bc9c7f08be56
+    - device_tracker.android5b7d58662dcbf6c9
     #- device_tracker.randysipad
     #- device_tracker.michaelvolleyball
     #- device_tracker.garrettthedudslocal
@@ -188,6 +190,7 @@ motion_sensors:
     - binary_sensor.motion_sensor_kitchen
     #- binary_sensor.motion_sensor_mudroom
     - binary_sensor.motion_sensor_bonus_room
+    - binary_sensor.motion_sensor_office
 doors_windows:
   name: "Doors & Windows"
   entities:
@@ -263,6 +266,7 @@ downstairs:
     - light.living_room_lamp
     - light.kitchen_lights
     - light.breakfast_area_lights
+    - light.dining_room_lights
     #- light.cabinet_lights
     - light.mudroom_lights
     #- light.breakfast_1
@@ -287,6 +291,8 @@ outside_lights:
 scripts:
   name: "Scripts"
   entities:
+    - script.away_mode
+    - script.return_mode
     - script.morning
     - script.afternoon
     - script.evening

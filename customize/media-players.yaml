@@ -7,10 +7,10 @@ media_player.master_bedroom_tv:
   emulated_hue: true
   
 media_player.roku_4:
-  friendly_name: 'Roku Master Bedroom'
+  friendly_name: 'Roku Living Room'  
   
 media_player.roku_5s467u102719:
-  friendly_name: 'Roku Living Room'
+  friendly_name: 'Roku Master Bedroom'
   
 media_player.roku_5s56au613037:
   friendly_name: 'Roku Bonus Room'

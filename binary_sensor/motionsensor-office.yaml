@@ -1,0 +1,7 @@
+platform: mqtt
+state_topic: "smartthings/Motion Sensor Extra/motion"
+name: "Motion Sensor Office"
+payload_on: "active"
+payload_off: "inactive"
+device_class: motion
+retain: true

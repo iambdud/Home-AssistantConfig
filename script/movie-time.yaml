@@ -26,7 +26,8 @@ movie_time:
 
   - service: media_player.select_source
     data:
-      entity_id: media_player.roku_5s467u102719
+      #entity_id: media_player.roku_5s467u102719
+      entity_id: media_player.roku_4
       #entity_id: media_player.roku_living_room
       source: Plex
   - service: homeassistant.turn_off

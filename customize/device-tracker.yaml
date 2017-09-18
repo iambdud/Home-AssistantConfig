@@ -7,3 +7,9 @@ device_tracker.andreasiphone:
   #friendly_name: Ben ST
 #device_tracker.andrea_st_presence:
   #friendly_name: Andrea ST
+  
+device_tracker.androidaee3bc9c7f08be56:
+  friendly_name: Mom
+   
+device_tracker.android5b7d58662dcbf6c9:
+  friendly_name: Dad

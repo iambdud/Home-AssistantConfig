@@ -1,0 +1,15 @@
+#####################################################################################
+###  script to turn off BI automations when we will be gone, but someone will be at the house
+###  (so i don't get a million notifications)
+#####################################################################################
+
+away_mode:
+  alias: "away mode"
+  sequence:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - automation.blueiris__set_bi_profile_to_alert_if_doors_open_while_we_are_not_home
+        - automation.presence__do_stuff_when_we_get_home
+        - automation.presence__do_stuff_when_we_leave
+        - automation.presence__turn_off_stuff_when_were_gone_for_10_minutes

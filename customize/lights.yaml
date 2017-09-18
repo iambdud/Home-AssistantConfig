@@ -53,6 +53,10 @@ light.mudroom_lights:
 light.bonus_room_lights:
   friendly_name: 'Bonus Room Lights'
   emulated_hue: true
+
+light.play_room_lights:
+  friendly_name: 'Play Room Lights'
+  emulated_hue: true
   
 light.dining_room_lights:
   friendly_name: 'Dining Room Lights'
