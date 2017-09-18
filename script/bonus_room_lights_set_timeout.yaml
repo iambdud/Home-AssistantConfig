@@ -1,13 +1,14 @@
 bonus_room_lights_set_timeout:
-  alias: "Turn on light and set timeout"
+  #alias: "Turn on light and set timeout"
+  alias: "Set Timeout"
   sequence:
   # Cancel ev. old timers
   - service: script.turn_off
     data:
       entity_id: script.bonus_room_lights_timeout
-  # turn on light
-  - service: light.turn_on
-    entity_id: light.bonus_room_lights
+  # turn on light - don't turn the light on any more... just turn it off after X time
+  #- service: light.turn_on
+    #entity_id: light.bonus_room_lights
   # Set new timer
   - service: script.turn_on
     data:
