@@ -122,6 +122,8 @@ presence:
   entities:
     - device_tracker.bensoneplusone
     - device_tracker.andreasiphone
+    #- device_tracker.iphonethedudslocal
+    #- device_tracker.iphonethedudslocal_2
     - device_tracker.jeanettesiphone
     #- device_tracker.jeanettesipad
     - device_tracker.stevesphone
