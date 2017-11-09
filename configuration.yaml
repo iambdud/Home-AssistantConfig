@@ -57,7 +57,7 @@ tts:
   - platform: amazon_polly
     aws_access_key_id: !secret aws_access_key_ID
     aws_secret_access_key: !secret aws_secret_access_key
-    region_name: 'us-east-2'
+    region_name: 'us-east-1'
 
 switch: !include switch.yaml
 
@@ -76,9 +76,6 @@ automation: !include_dir_merge_list automation
 
 climate: !include_dir_list climate
 
-ecobee:
-    api_key: wb0Esf0q2mEUBXgdeogjDLyHAeuok0pY
-
 notify: !include notification.yaml
 
 media_player: !include_dir_list media_player
@@ -87,7 +84,8 @@ light: !include_dir_list light
 
 lock: !include_dir_list lock
 
-input_slider: !include input-slider.yaml
+#input_slider: !include input-slider.yaml
+input_number: !include input-slider.yaml
 #input_slider: !include_dir_list input_sliders
 
 input_select: !include input-select.yaml
@@ -122,13 +120,20 @@ emulated_hue:
     #- media_player
     #- script
     #- input_boolean
+google_assistant:
+  project_id: hass-18326
+  client_id: QyF75ly198XtpEcvO7p7mt7APzHrgX9rs13K0gihfYV3AASCFK1Avf0FTLaQmmH9ZOwK
+  access_token: k8ozcAsW0XoasCwgH35xx4vJ0W8i4N0q5Jli643aipDifdEFxFumeGUXVFYfI19BF5pJJNHcYWRHnvPY
+  exposed_domains:
+    - switch
+    - light
+    - group
+    - cover
 
 ifttt:
   key: !secret ifttt_key
 
 recorder:
-  purge_days: 7
+  purge_interval: 2
+  purge_keep_days: 7
   db_url: !secret db_url
-
-#influxdb:
-  #host: linuxserver1

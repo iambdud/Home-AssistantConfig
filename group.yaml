@@ -64,6 +64,7 @@ media_player_view:
   entities:
     - media_player.living_room_tv
     - media_player.roku_4
+    - media_player.media_room
     - media_player.roku_5s467u102719
     - media_player.roku_5s56au613037
     #- media_player.roku_master_bedroom

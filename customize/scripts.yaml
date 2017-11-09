@@ -1,35 +1,35 @@
 script.morning:
   friendly_name: 'Morning'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 script.afternoon:
   friendly_name: 'Afternoon'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 script.evening:
   friendly_name: 'Evening'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 script.bedtime:
   friendly_name: 'Bedtime'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 script.goodbye:
   friendly_name: 'Goodbye'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 script.tv_time:
   friendly_name: 'TV Time'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 script.movie_time:
   friendly_name: 'Movie Time'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 script.green_light:
   friendly_name: 'Green Light'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 script.red_light:
   friendly_name: 'Red Light'
-  emulated_hue: true
+  emulated_hue_hidden: false

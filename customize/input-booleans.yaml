@@ -4,38 +4,38 @@
 
 input_boolean.alert_mode:
   friendly_name: 'Alert Mode'
-  emulated_hue: False
+  emulated_hue_hidden: true
   hidden: False
   icon: mdi:alert-octagram
 
 input_boolean.guest_mode:
   friendly_name: 'Guest Mode'
-  emulated_hue: False
+  emulated_hue_hidden: true
   hidden: False
   icon: mdi:account-alert
 
 input_boolean.last_message:
   friendly_name: 'Last Message'
-  emulated_hue: true
+  emulated_hue_hidden: false
   hidden: False
   icon: mdi:repeat-once
 
 input_boolean.school_mode:
   friendly_name: 'School Mode'
-  emulated_hue: False
+  emulated_hue_hidden: true
   hidden: False
   icon: mdi:school
 
 input_boolean.speech_notifications:
   friendly_name: 'Speech Notifications'
-  emulated_hue: False
+  emulated_hue_hidden: true
   hidden: False
   icon: mdi:speaker-wireless
 
 input_boolean.prevent_stoplight_alexa:
-  emulated_hue: False
+  emulated_hue_hidden: true
   hidden: False
 
 input_boolean.allow_stoplight_automation:
-  emulated_hue: False
+  emulated_hue_hidden: true
   hidden: False

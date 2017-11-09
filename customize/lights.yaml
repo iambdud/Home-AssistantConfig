@@ -1,63 +1,63 @@
 light.andreas_lamp:
   friendly_name: "Andrea's Lamp"
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 light.bens_lamp:
   friendly_name: "Ben's Lamp"
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 light.front_porch_lights:
   friendly_name: 'Front Porch Lights'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 light.driveway_lights:
   friendly_name: 'Driveway Lights'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 light.living_room_lights:
   friendly_name: 'Living Room Lights'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 light.living_room_lamp:
   friendly_name: 'Living Room Lamp'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 light.kitchen_lights:
   friendly_name: 'Kitchen Lights'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 light.cabinet_lights:
   friendly_name: 'Cabinet Lights'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 light.breakfast_area_lights:
   friendly_name: 'Breakfast Area Lights'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 light.master_bedroom_lights:
   friendly_name: 'Master Bedroom Lights'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 light.upstairs_hall_lamp:
   friendly_name: 'Upstairs Hall Lamp'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 light.upstairs_hall_lights:
   friendly_name: 'Upstairs Hall Lights'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 light.mudroom_lights:
   friendly_name: 'Mudroom Lights'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 light.bonus_room_lights:
   friendly_name: 'Bonus Room Lights'
-  emulated_hue: true
+  emulated_hue_hidden: false
 
 light.play_room_lights:
   friendly_name: 'Play Room Lights'
-  emulated_hue: true
+  emulated_hue_hidden: false
   
 light.dining_room_lights:
   friendly_name: 'Dining Room Lights'
-  emulated_hue: true
+  emulated_hue_hidden: false

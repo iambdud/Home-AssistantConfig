@@ -1,74 +1,74 @@
 group.all_devices:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.all_automations:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.all_scripts:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.all_switches:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.automations:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.doors_windows:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.motion_sensors:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.plex:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.presence:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.sensor_battery_levels:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.sonos_players:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.temp_sensors:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.speedtest:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.upstairs:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.weather:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.all_covers:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.garage_doors:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.sonarr:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.devices:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.blueiris:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.weather_view:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.master_bedroom:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.lr_separates:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.scenes_scripts_automations:
-  emulated_hue: false
+  emulated_hue_hidden: false
 
 group.scripts:
-  emulated_hue: false
+  emulated_hue_hidden: false
