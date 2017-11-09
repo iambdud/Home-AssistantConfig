@@ -129,6 +129,7 @@ google_assistant:
     - light
     - group
     - cover
+    
 
 ifttt:
   key: !secret ifttt_key
