@@ -122,8 +122,8 @@ emulated_hue:
     #- input_boolean
 google_assistant:
   project_id: hass-18326
-  client_id: QyF75ly198XtpEcvO7p7mt7APzHrgX9rs13K0gihfYV3AASCFK1Avf0FTLaQmmH9ZOwK
-  access_token: k8ozcAsW0XoasCwgH35xx4vJ0W8i4N0q5Jli643aipDifdEFxFumeGUXVFYfI19BF5pJJNHcYWRHnvPY
+  client_id: !secret ga_client_id
+  access_token: !secret ga_access_token
   exposed_domains:
     - switch
     - light
