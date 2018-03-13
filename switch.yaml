@@ -1,9 +1,29 @@
-platform: mqtt
-name: "Patio Lights"
-state_topic: "smartthings/Patio Lights/switch"
-command_topic: "smartthings/Patio Lights/switch"
-qos: 0
-payload_on: "on"
-payload_off: "off"
-optimistic: false
-retain: true
+- platform: mqtt
+  name: "Patio Lights"
+  state_topic: "smartthings/Patio Lights/switch"
+  command_topic: "smartthings/Patio Lights/switch"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: "Christmas Lights"
+  state_topic: "smartthings/Christmas Lights/switch"
+  command_topic: "smartthings/Christmas Lights/switch"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: "Outdoor Switch"
+  state_topic: "smartthings/Outdoor Switch/switch"
+  command_topic: "smartthings/Outdoor Switch/switch"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+  retain: true

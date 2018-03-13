@@ -1,5 +1,5 @@
 device_tracker.bensoneplusone:
-  friendly_name: Ben
+  friendly_name: Ben (oneplus one)
 
 device_tracker.andreasiphone:
   friendly_name: Andrea
@@ -13,3 +13,6 @@ device_tracker.androidaee3bc9c7f08be56:
    
 device_tracker.android5b7d58662dcbf6c9:
   friendly_name: Dad
+
+device_tracker.android7e69a614b10fc551thedudslocal:
+  friendly_name: Ben

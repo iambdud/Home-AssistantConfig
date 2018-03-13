@@ -1,0 +1,21 @@
+light.andreas_lamp:
+  platform: hue
+  unique_id: 00:17:88:01:02:32:06:ba-0b
+light.bens_lamp:
+  platform: hue
+  unique_id: 00:17:88:01:02:32:04:f8-0b
+media_player.family_room_home:
+  platform: cast
+  unique_id: 6827bf75-f1fe-e371-f0b2-3075dd0a8c54
+media_player.living_room:
+  platform: sonos
+  unique_id: RINCON_B8E93774D2A301400
+media_player.playroom:
+  platform: sonos
+  unique_id: RINCON_B8E9375C8C5E01400
+media_player.outside_speakers:
+  platform: cast
+  unique_id: 29c86262-1843-0104-3792-433d4be1b8e3
+media_player.kitchen_speakers:
+  platform: cast
+  unique_id: 429984c9-fd58-1f2d-1a8e-2615d45d2e47

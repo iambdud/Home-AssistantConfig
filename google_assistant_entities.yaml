@@ -1,0 +1,75 @@
+light.living_room_lights:
+  name: Living Room Lights
+  expose: true
+  #aliases: Living Room Lights
+  
+light.kitchen_lights:
+  name: Kitchen Lights
+  expose: true
+  
+light.andreas_lamp:
+  name: "Andrea's Lamp"
+  expose: true
+  
+light.bens_lamp:
+  name: "Ben's Lamp"
+  expose: true
+  
+light.front_porch_lights:
+  name: Front Porch Lights
+  expose: true
+  
+light.driveway_lights:
+  name: Driveway Lights
+  expose: true
+  
+light.breakfast_area_lights:
+  name: Breakfast Area Lights
+  expose: true
+  aliases:
+    - Breakfast Area Lights
+    - Breakfast Lights
+  
+light.mudroom_lights:
+  name: Mudroom Lights
+  expose: true
+  
+light.master_bedroom_lights:
+  name: Master Bedroom Lights
+  expose: true
+  
+light.upstairs_hall_lights:
+  name: Upstairs Hall Lights
+  expose: true
+  
+light.dining_room_lights:
+  name: Dining Room Lights
+  expose: true
+  
+switch.patio_lights:
+  name: Patio Lights
+  expose: true
+  
+cover.left_garage_door:
+  name: "Ben's Garage Door"
+  expose: true
+
+cover.right_garage_door:
+  name: "Andrea's Garage Door"
+  expose: true
+  
+script.bedtime:
+  name: 'Bedtime'
+  expose: true
+
+script.goodbye:
+  name: 'Goodbye'
+  expose: true
+
+script.tv_time:
+  name: 'TV Time'
+  expose: true
+
+script.movie_time:
+  name: 'Movie Time'
+  expose: true

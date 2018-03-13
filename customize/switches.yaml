@@ -1,3 +1,11 @@
 switch.patio_lights:
   friendly_name: "Patio Lights"
   emulated_hue_hidden: false
+  
+switch.christmas_lights:
+  friendly_name: "Christmas Lights"
+  emulated_hue_hidden: false
+  
+switch.outdoor_switch:
+  friendly_name: "Outdoor Switch"
+  emulated_hue_hidden: false

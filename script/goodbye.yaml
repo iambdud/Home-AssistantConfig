@@ -31,5 +31,6 @@ goodbye:
         - light.upstairs_hall_lights
         - light.bonus_room_lights
         - light.master_bedroom_lights
-        - group.all_switches
+        #- group.all_switches
+        - switch.patio_lights
         - media_player.living_room_tv
